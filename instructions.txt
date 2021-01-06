@@ -2,7 +2,7 @@
 Straightforward Training™
 Windows 10 Security (Paranoid Mode)
 Author: Saulo S. Ortiz
-Date: 20201214
+Date: 20201214s
 Contact: thetiredretired@gmail.com
 ********************************************************
 
@@ -23,21 +23,21 @@ certificates, and a Bachelors in Cyber Forensics/Information Security from Keise
 Important Information:
 =============================================================================
 	1. All steps in this guide have been confirmed multiple times that will not cause any damage/corruption to data, but as always, this
-	is not 100% guaranteed. So,	take all necessary steps to save all important data before attempting this or	any OS modifications. 
+	is not 100% guaranteed. So,	take all necessary steps to save all important data before attempting this or	any OS modifications.
 	Don't forget to	include any browser bookmark backups which almost everyone forgets to do.
 
-	2. These modifications are set for a system that will no longer accept updates (patches). I cannot guarantee that the modifications 
+	2. These modifications are set for a system that will no longer accept updates (patches). I cannot guarantee that the modifications
 	will remain if you continue	to receive updates.
 
-	3. The modified settings in this guide are for a Desktop environment. If any functions are required by the user to perform work/school 
-	(video chat, smart card	remote desktop functions, etc) modifications will need to be reset to their	original settings or just don't 
+	3. The modified settings in this guide are for a Desktop environment. If any functions are required by the user to perform work/school
+	(video chat, smart card	remote desktop functions, etc) modifications will need to be reset to their	original settings or just don't
 	disabled them at all.
 
-	4. Please read each modification option carefully to understand what they do before you disable them. Always backup your current Windows 
+	4. Please read each modification option carefully to understand what they do before you disable them. Always backup your current Windows
 	to an external device and do a restore point before modifying Windows.
 
 -----------------------------------------------------------------------------
-Note: 	Windows 10240 has way less Bloatware than higher versions but are more difficult to remove. Cortana cannot be removed in this version. 
+Note: 	Windows 10240 has way less Bloatware than higher versions but are more difficult to remove. Cortana cannot be removed in this version.
 		This guide goes over Windows 10 (19041) which is easier to modify.
 -----------------------------------------------------------------------------
 
@@ -97,10 +97,10 @@ Note: 	If you don't have .NET 3.5 then install it now before you start this step
 =============================================================================
 Step #2: Removing Bloatware
 =============================================================================
-Use CCleaner to remove Bloatware like MS Store, Cortana, Mail, Tips, Weather, Messaging, Eclipse, XBOX, OneDrive, People, Remote, Maps, Mixed 
+Use CCleaner to remove Bloatware like MS Store, Cortana, Mail, Tips, Weather, Messaging, Eclipse, XBOX, OneDrive, People, Remote, Maps, Mixed
 Reality, etc. Depends on what you don't want to use.
 
-Additionally, I've used CCleaner, but depending of the version, it calls out to China as Glasswire may indicate. So block CCleaner from updating 
+Additionally, I've used CCleaner, but depending of the version, it calls out to China as Glasswire may indicate. So block CCleaner from updating
 using the Host file and ApateDNS, or Glasswire/Windows Firewall rules.
 
 	09. Go to CCleaner Settings and Uncheck Smart Monitoring and Auto Updates
@@ -123,11 +123,11 @@ Note:	May need to allow for hidden files and folders in:
 
 	13. If anything shows in Glasswire make sure you block it by selecting the Fire icon next to the alert
 
-Once you are done editing the Host file and modifying the Firewall through Glasswire, make sure you save a copy of the Host file and export the 
+Once you are done editing the Host file and modifying the Firewall through Glasswire, make sure you save a copy of the Host file and export the
 Firewall settings and again them in a safe place.
 
 -----------------------------------------------------------------------------
-Note:	If you don't want to keep CCleaner then uninstall it when you're done...If you're going to keep it, secure it with the steps I've 
+Note:	If you don't want to keep CCleaner then uninstall it when you're done...If you're going to keep it, secure it with the steps I've
 		mentioned above but also disable the Autorun, Auto Update and Monitoring features in its Settings tab
 -----------------------------------------------------------------------------
 
@@ -163,11 +163,11 @@ Step #3: Disabling Some Services
 =============================================================================
 This step will take you a bit of time to complete. Again, go through each one and Disable the Services you don't need.
 
-Some Services I've disabled are: ActiveX, Smart Card, Geolocation, Windows Updates, Fax, XBOX, Secondary Logon, Remote, Telephony, Bluetooth, 
+Some Services I've disabled are: ActiveX, Smart Card, Geolocation, Windows Updates, Fax, XBOX, Secondary Logon, Remote, Telephony, Bluetooth,
 Error Reporting and *Windows Event Logon.
 
 -----------------------------------------------------------------------------
-Note:	*If you turn off Windows Event Logon it will also turn off Network List Services and Network Location Awareness which may disable the 
+Note:	*If you turn off Windows Event Logon it will also turn off Network List Services and Network Location Awareness which may disable the
 		Search Bar in the taskbar and you wont be able to search for anything...but this issue depends on the Window 10 version
 -----------------------------------------------------------------------------
 
