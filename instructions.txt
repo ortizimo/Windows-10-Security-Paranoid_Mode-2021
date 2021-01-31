@@ -6,7 +6,7 @@ Date: 20210113
 Update: 20210131
 Contact: thetiredretired@gmail[.]com
 ********************************************************
-Copyright ©2021 Saulo Ortiz. All Rights Reserved!
+Copyright ©2021 Saulo S. Ortiz. All Rights Reserved!
 ********************************************************
 
 *** No reproduction/modification of this guide is allowed for commercial purposes without explicit written permission from the author! ***
@@ -14,7 +14,7 @@ Copyright ©2021 Saulo Ortiz. All Rights Reserved!
 **************************************************************************************************************************************************
 Update #1: 20210131
 Tried another VM session as an experiment to see if this version (18362) would update before doing any heavy modifications. I did perform one
-modification before updating which was disabling the Windows Update Medic Service in the registry, then run updates and install them. After 
+modification before updating which was disabling the Windows Update Medic Service in the registry, then ran updates and install them. After 
 rebooting I then disabled the regular Windows Update. I'm happy to announce that after the updates, all sections of this guide still worked.
 
 Issue:
