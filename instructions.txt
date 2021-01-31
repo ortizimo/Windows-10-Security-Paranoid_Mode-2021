@@ -3,12 +3,27 @@ Straightforward Training™
 Windows 10 Security (Paranoid Mode) aka Threat Level Midnight!
 Author: Saulo S. Ortiz
 Date: 20210113
-Update: 20210130
+Update: 20210131
 Contact: thetiredretired@gmail[.]com
+********************************************************
 Copyright ©2021 Saulo Ortiz. All Rights Reserved!
 ********************************************************
 
 *** No reproduction/modification of this guide is allowed for commercial purposes without explicit written permission from the author! ***
+
+**************************************************************************************************************************************************
+Update #1: 20210131
+Tried another VM session as an experiment to see if this version (18362) would update before doing any heavy modifications. I did perform one
+modification before updating which was disabling the Windows Update Medic Service in the registry, then run updates and install them. After 
+rebooting I then disabled the regular Windows Update. I'm happy to announce that after the updates, all sections of this guide still worked.
+
+Issue:
+At this time, I cannot find where the blockage for Updating Windows is. Allowing both Windows Update Service and the Windows Update Medic Service
+as the were would not allow me to update. This issue could lie in the Group Policy, Registry or Firewall. More to come on this once later once IP
+discover where the issue lies. In the mean time, update before you start the guide.
+
+PS, This works on non-legit copies of Windows.
+**************************************************************************************************************************************************
 
 ==================================================================================================================================================
 A Bit About the Author:
@@ -27,24 +42,27 @@ two great, but equally annoying kids.
 ==================================================================================================================================================
 Disclaimer:
 ==================================================================================================================================================
-	1. All steps in this guide have been confirmed multiple times that will not cause any damage/corruption to data, but as always, this is not
+	1. This guide is written for educational purposes only. I do not encourage software piracy. Buy all the software or find trial versions of
+	them.
+	
+	2. All steps in this guide have been confirmed multiple times that will not cause any damage/corruption to data, but as always, this is not
 	100% guaranteed. So, take all necessary steps to save all important data to an external device before attempting this or any OS modifications.
 	Don't forget to	include any browser bookmarks backups which almost everyone forgets to do.
 
-	2. These modifications are set for a system that will no longer accept updates (patches). I cannot guarantee that the modifications will remain
+	3. These modifications are set for a system that will no longer accept updates (patches). I cannot guarantee that the modifications will remain
 	if you continue	to receive updates. *More on this on a later revision.
 
-	3. The modified settings in this guide are for a Desktop environment. If any functions are required by the user to perform work/school (video
+	4. The modified settings in this guide are for a Desktop environment. If any functions are required by the user to perform work/school (video
 	chat, smart card remote desktop functions, etc) modifications will need to be reset to their original settings or simply just don't disabled
 	them at all. Modifying these on a laptop environment will result in very limited video communications...unless you know what you need to do.
 
-	4. Please read each modification option carefully to understand what they do before you disable/enable them. Always backup your current Windows
+	5. Please read each modification option carefully to understand what they do before you disable/enable them. Always backup your current Windows
 	settings to an external device using Windows Backup or any third party tool you favor. Also do a restore point before modifying Windows just
 	in case you need to go back.
 
-	5. Bloatware removed cannot be reinstalled unless you re-install the entire OS from scratch!
+	6. Bloatware removed cannot be reinstalled unless you re-install the entire OS from scratch!
 
-	6. These steps have only been tested with Windows 10 10240, 18362 and 19041. I cannot confirm they will work with any other Windows 10 versions.
+	7. These steps have only been tested with Windows 10 10240, 18362 and 19041. I cannot confirm they will work with any other Windows 10 versions.
 	This guide goes over Windows 10 (18362 and 19041) which are easier to modify.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
@@ -575,4 +593,3 @@ you the following:
 
 Contact me if you have any questions on anything I've mentioned here, I've missed something or need clarification.
 ==================================================================================================================================================
-
