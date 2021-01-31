@@ -31,7 +31,7 @@ Disclaimer:
 	100% guaranteed. So, take all necessary steps to save all important data to an external device before attempting this or any OS modifications.
 	Don't forget to	include any browser bookmarks backups which almost everyone forgets to do.
 
-	2. These modifications are set for a system that will no longer accept updates (patches). I cannot guarantee that the modifications	will remain
+	2. These modifications are set for a system that will no longer accept updates (patches). I cannot guarantee that the modifications will remain
 	if you continue	to receive updates. *More on this on a later revision.
 
 	3. The modified settings in this guide are for a Desktop environment. If any functions are required by the user to perform work/school (video
@@ -83,7 +83,7 @@ Index:
 		7.	Disabling Some Services
 		8.	Modifying the Group Policy
 		9.	Cleaning and Backing Up the Registry
-		10. Bonus Info!
+		10. 	Bonus Info!
 ==================================================================================================================================================
 
 ==================================================================================================================================================
@@ -213,7 +213,7 @@ Reality, etc. Depends on what you don't want to use.
 
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 Important: 	You cannot re-install any of the Windows Modules so make a Restore Point and an Image Backup if you think you may need any of these
-			features later!
+		features later!
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
 	1. Run CCleaner and uninstall any of the Windows Modules you don't need mentioned above.
@@ -250,7 +250,7 @@ Important!	Do not disable any Antivirus or security program!
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	If you don't want to keep CCleaner then uninstall it when you're done...If you're going to keep it, secure it with the steps I've mentioned
-		above but also disable the Autorun, Auto Update and Monitoring features in its Settings tab
+	above but also disable the Autorun, Auto Update and Monitoring features in its Settings tab
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -288,7 +288,7 @@ the Firewall settings and again them in a safe place. But first lets modify the 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	You can delete the firewall rules for the Windows modules or just disable them! Just know that if you're still using them, they will
-		message you asking for a way out. Disabling them is the easiest way to block them. Also notice all the Glasswire rules...to view them:
+	message you asking for a way out. Disabling them is the easiest way to block them. Also notice all the Glasswire rules...to view them:
 			a. Double click on one of them
 			b. Select Program and Services tab
 			c. Find the name of the application being blocked
@@ -326,7 +326,7 @@ Bluetooth, Error Reporting and *Windows Event Logon.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	*If you turn off Windows Event Logon it will also turn off Network List Services and Network Location Awareness which may disable the
-		Search Bar and Search Icon and you won't be able to search for anything...but this issue depends on the Window 10 version
+	Search Bar and Search Icon and you won't be able to search for anything...but this issue depends on the Window 10 version
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 	1. In the Search Bar type and run: Services
@@ -349,7 +349,7 @@ Note: 	Some services cannot be stopped!!!
 
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 Important!	I recommend taking screen captures using the Snipping Tool in Windows or notes to save the original settings in case you need to
-			revert them
+		revert them
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
 
@@ -378,7 +378,7 @@ Note: 	By default Policies will read "Not configured" which is the same to say t
 		description
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	If you see an icon of an arrow pointing down, it means that the Service was turned off. You don't need to do anything in Group Policy
-		unless you want to. But since this is Paranoid mode then...
+	unless you want to. But since this is Paranoid mode then...
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 
