@@ -67,7 +67,7 @@ Disclaimer:
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	Windows 10240 has way less Bloatware than later versions, but Windows Apps are more difficult to remove. Cortana cannot be removed in
-		version 10240.
+	version 10240.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 ==================================================================================================================================================
@@ -83,13 +83,13 @@ Tools needed:
 	-Notepad++ (Any version)
 	-Wise Registry Cleaner 9.4.7.619
 
-*All tools located in my Google Drive...contact me for access. SHA hashes will be provided for each program.
+*All tools located in my Google Drive...contact me for access. Hashes will be provided for each program.
 
 Windows Firewall export, hosts file and Registry backup created from using this guide, can also be found in my Google drive.
 
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 Important!	Create an Image Backup and a restore point before making any changes toi you system! Better yet, if enough resources are available,
-			do all this changes in a VM for testing purposes before doing them in your actual system.
+		do all this changes in a VM for testing purposes before doing them in your actual system.
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
 ==================================================================================================================================================
@@ -130,7 +130,7 @@ above 10240. Therefore, I do not recommend it at this time.
 
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 Important!	You cannot re-install Windows applications like CAmera, Maps, Calendar, etc without going to the Microsoft Store. Make sure you do not
-			needs any of them before you uninstall them!!!
+		needs any of them before you uninstall them!!!
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
 
@@ -203,8 +203,8 @@ Step #3b:
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note:	Pay attention to ApateDNS and Glasswire. If anything tries to call-out during or after tool installation, or when you run each tool, use
-		Glasswire to block them. Also you can modify the hosts file using Notepad++ and entering the URL or IP found in ApateDNS and Glasswire.
-		All this will take a while for you to capture, edit and repeat.
+	Glasswire to block them. Also you can modify the hosts file using Notepad++ and entering the URL or IP found in ApateDNS and Glasswire.
+	All this will take a while for you to capture, edit and repeat.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 	2. In Glasswire:
@@ -228,7 +228,7 @@ Note:	To see the Glasswire Firewall rules: Control Panel > Windows Defender Fire
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note:	A good resource for an already edited hosts file can be found in www.someonewhocares.org. I highly recommend using this server hosts file
-		for personal use. Make sure you inspect it all and change any 0.0.0.0 to 127.0.0.1. There is a difference in how these two IPs work.
+	for personal use. Make sure you inspect it all and change any 0.0.0.0 to 127.0.0.1. There is a difference in how these two IPs work.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	You may need to allow for hidden files and folders in to be viewed:
 			a. 	Control Panel > File Explorer Options > View Tab
@@ -346,7 +346,7 @@ Inbound and the Outbound Firewall rules. First the Inbound.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	You can delete the firewall rules for the Windows modules or just disable them! Just know that if you're still using them, they will
-		message you asking for a way out. Disabling them is the easiest way to block them. Also notice all the Glasswire rules...to view them:
+	message you asking for a way out. Disabling them is the easiest way to block them. Also notice all the Glasswire rules...to view them:
 			a. Double click on one of them
 			b. Select Program and Services tab
 			c. Find the name of the application being blocked
@@ -407,7 +407,7 @@ Important!	I recommend taking screen captures using the Snipping Tool in Windows
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	*If you turn off Windows Event Logon it will also turn off Network List Services and Network Location Awareness which may disable the
-		Search Bar and Search Icon and you won't be able to search for anything...but this issue depends on the Window 10 version
+	Search Bar and Search Icon and you won't be able to search for anything...but this issue depends on the Window 10 version
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 	1. In the Search Bar type and run: Services
@@ -486,10 +486,10 @@ Important!	*Do not disable TabletPC or anything Tablet related in both Group Pol
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	By default Policies will read "Not configured" which is the same to say the Policy is either On or Off depending of what it states in its
-		description
+	description
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	If you see an icon of an arrow pointing down, it means that the Service was turned off. You don't need to do anything in Group Policy
-		unless you want to. But since this is Paranoid mode then...
+	unless you want to. But since this is Paranoid mode then...
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -517,7 +517,7 @@ Step #12: Bonus Info!
 ==================================================================================================================================================
 GodMode:
 	1. What if I told you there is such a thing as GodMode in Windows? Yes! Just like a video game where you can have access to every
-	available option or	make your character invincible you can have access to all the Windows user features in one single screen.
+	available option or make your character invincible you can have access to all the Windows user features in one single screen.
 	To do this:
 		a. In Desktop create a new Folder
 		b. Right click on it and copy and paste this: GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
