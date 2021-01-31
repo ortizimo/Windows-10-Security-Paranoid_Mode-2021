@@ -11,7 +11,6 @@ Copyright ©2021 Saulo S. Ortiz. All Rights Reserved!
 
 *** No reproduction/modification of this guide is allowed for commercial purposes without explicit written permission from the author! ***
 
-
 **************************************************************************************************************************************************
 Update #1: 20210131
 Tried another VM session as an experiment to see if this version (18362) would update before doing any heavy modifications. I did perform one
@@ -95,18 +94,18 @@ Important!	Create an Image Backup and a restore point before making any changes 
 ==================================================================================================================================================
 Index:
 ==================================================================================================================================================
-		1. 	Disabling Some Privacy Settings
-		2.	Software Tool Setup
-		3.	Capturing Callouts
-		4.	Removing Bloatware
-		5.	Modifying the Firewall
-		6. 	Exporting Firewall Rules and Hosts File Changes for Backup
-		7:	Disabling IPv6
-		8.	Disabling Some Services
-		9.	Modifying the Registry to Stop Blocked Services
-		10.	Modifying the Group Policy
-		11.	Cleaning and Backing Up the Registry
-		12.	Bonus Info!
+		1. Disabling Some Privacy Settings
+		2. Software Tool Setup
+		3. Capturing Callouts
+		4. Removing Bloatware
+		5. Modifying the Firewall
+		6. Exporting Firewall Rules and Hosts File Changes for Backup
+		7. Disabling IPv6
+		8. Disabling Some Services
+		9. Modifying the Registry to Stop Blocked Services
+		10. Modifying the Group Policy
+		11. Cleaning and Backing Up the Registry
+		12. Bonus Info!
 ==================================================================================================================================================
 
 ==================================================================================================================================================
@@ -162,12 +161,12 @@ Note: 	You'll need .NET 3.5 for ApateDNS to work. Install it before starting thi
 	1. Using another computer, Download all tools mentioned in the Tools section...DO NOT USE THE SAME COMPUTER OR VM YOU'RE GOING TO MODIFY!
 
 	2. Disable your Internet connection by either:
-		a.	Control Panel > Network and Sharing Center > Change Adapter Settings > Right click on the NIC icon and select Disable
-		b.	Or remove the USB antenna
-		c.	Or remove the cat5 cable
-		d. 	Right click on the Internet Access icon on the right side in the Taskbar > Open Network & Internet Settings > Status > Adapter Options
-			Right Click on your connection icon, then select Disable
-		e.	If you're using a VM then disconnect the NIC in the VM Settings
+		a. Control Panel > Network and Sharing Center > Change Adapter Settings > Right click on the NIC icon and select Disable
+		b. Or remove the USB antenna
+		c. Or remove the cat5 cable
+		d.  Right click on the Internet Access icon on the right side in the Taskbar > Open Network & Internet Settings > Status > Adapter Options
+		Right Click on your connection icon, then select Disable
+		e. If you're using a VM then disconnect the NIC in the VM Settings
 
 	3. Install ApateDNS first
 
@@ -216,12 +215,12 @@ Note:	To see the Glasswire Firewall rules: Control Panel > Windows Defender Fire
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 	3. To use Notepad++ to edit the Hosts file and create a loop for any call-outs to return to your host machine:
-		a.	Go to C:\Windows\System32\drivers\etc\
-		b. 	Right click on the hosts file
-		c.	Select Edit with Notepad++
-		d.	When you save the changes (Ctrl+S) it will ask you to open Notepad++ as administrator, select Yes for your changes to be moved to the
-			new Notepad++ instance
-		e. 	Save any changes
+		a. Go to C:\Windows\System32\drivers\etc\
+		b. Right click on the hosts file
+		c. Select Edit with Notepad++
+		d. When you save the changes (Ctrl+S) it will ask you to open Notepad++ as administrator, select Yes for your changes to be moved to the
+		new Notepad++ instance
+		e. Save any changes
 
 	4. Under all the commented out statemens start a new line and enter any findings ApateDNS. Example:
 			127.0.0.1		adobe.updates.com		#Adobe Reader 11
@@ -231,19 +230,19 @@ Note:	A good resource for an already edited hosts file can be found in www.someo
 	for personal use. Make sure you inspect it all and change any 0.0.0.0 to 127.0.0.1. There is a difference in how these two IPs work.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	You may need to allow for hidden files and folders in to be viewed:
-			a. 	Control Panel > File Explorer Options > View Tab
-			b.	Select Show hidden files, folders...
-			c.	Uncheck Hide extensions for known file types...
-			d. 	Save the changes
+		a. Control Panel > File Explorer Options > View Tab
+		b. Select Show hidden files, folders...
+		c. Uncheck Hide extensions for known file types...
+		d.  Save the changes
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 Optional: To enter any Glasswire findings in the hosts file:
-		a.	Move your mouse over the alert and wait for the URL or IP address to show
-		b.	Using Notepad++ enter a new loop line with that information. See step #4 above.
+		a. Move your mouse over the alert and wait for the URL or IP address to show
+		b. Using Notepad++ enter a new loop line with that information. See step #4 above.
 
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 Important!	Make sure you block all of these tools from calling out to their home servers, especially CCleaner, Glasswire and Wise Registry
-			Cleaner. You don't want them to update and locked you out from certain options. Also you don't want leaks from them either.
+		Cleaner. You don't want them to update and locked you out from certain options. Also you don't want leaks from them either.
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
 
@@ -347,12 +346,12 @@ Inbound and the Outbound Firewall rules. First the Inbound.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	You can delete the firewall rules for the Windows modules or just disable them! Just know that if you're still using them, they will
 	message you asking for a way out. Disabling them is the easiest way to block them. Also notice all the Glasswire rules...to view them:
-			a. Double click on one of them
-			b. Select Program and Services tab
-			c. Find the name of the application being blocked
+		a. Double click on one of them
+		b. Select Program and Services tab
+		c. Find the name of the application being blocked
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	I highly suggest for all to get smart on the default firewall rules. Use another computer or take note then Google what you are not sure
-		of and how it may affect your communications.
+	of and how it may affect your communications.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -402,7 +401,7 @@ Bluetooth, Error Reporting and *Windows Event Logon, Telemetry.
 
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 Important!	I recommend taking screen captures using the Snipping Tool in Windows or taking notes to save the original settings in case you need
-			to revert back to them to make something you need work
+		to revert back to them to make something you need work
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
