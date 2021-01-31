@@ -1,3 +1,4 @@
+*************************************************************************************************************************************************
 Straightforward Training™
 Windows 10 Security (Paranoid Mode) aka Threat Level Midnight!
 Author: Saulo S. Ortiz
@@ -5,7 +6,7 @@ Date: 20210113
 Update: 20210130
 Contact: thetiredretired@gmail[.]com
 Copyright ©2021 Saulo Ortiz. All Rights Reserved!
-
+*************************************************************************************************************************************************
 No reproduction/modification of this guide is allowed for commercial purposes without explicit written permission from the author!
 
 ==================================================================================================================================================
