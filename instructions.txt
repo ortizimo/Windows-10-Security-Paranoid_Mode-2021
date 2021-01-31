@@ -11,6 +11,7 @@ Copyright ©2021 Saulo S. Ortiz. All Rights Reserved!
 
 *** No reproduction/modification of this guide is allowed for commercial purposes without explicit written permission from the author! ***
 
+
 **************************************************************************************************************************************************
 Update #1: 20210131
 Tried another VM session as an experiment to see if this version (18362) would update before doing any heavy modifications. I did perform one
@@ -19,11 +20,10 @@ rebooting I then disabled the regular Windows Update. I'm happy to announce that
 
 Issue:
 At this time, I cannot find where the blockage for Updating Windows is. Allowing both Windows Update Service and the Windows Update Medic Service
-as the were would not allow me to update. This issue could lie in the Group Policy, Registry or Firewall. More to come on this once later once IP
-discover where the issue lies. In the mean time, update before you start the guide.
-
-PS, This works on non-legit copies of Windows.
+as they were would not allow me to update. This issue could lie in the Group Policy, Registry or Firewall. More to come on this once I discover 
+where the issue lies. In the mean time, update before you start this guide.
 **************************************************************************************************************************************************
+
 
 ==================================================================================================================================================
 A Bit About the Author:
