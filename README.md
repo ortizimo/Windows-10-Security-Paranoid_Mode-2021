@@ -44,11 +44,11 @@ Disclaimer:
 
 	5. Bloatware removed can not be reinstalled unless you re-install the OS from scratch! This may change later on.
 
-	6. These steps have only been tested with Windows 10 10240 and 19041. I cannot confirm they will work with any other Windows 10 versions.
+	6. These steps have only been tested with Windows 10 10240, 18362 and 19041. I cannot confirm they will work with any other Windows 10 versions.
+	This guide goes over Windows 10 (18362 and 19041) which are easier to modify.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Note: 	Windows 10240 has way less Bloatware than higher versions, but are more difficult to remove. Cortana cannot be removed in 10240 version.
-		This guide goes over Windows 10 (19041) which is easier to modify.
+Note: 	Windows 10240 has way less Bloatware than later versions, but are more difficult to remove. Cortana cannot be removed in version 10240.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 ==================================================================================================================================================
@@ -81,9 +81,10 @@ Index:
 		5.	Modifying the Firewall
 		6. 	Exporting Firewall Rules and Hosts File Changes for Backup
 		7.	Disabling Some Services
-		8.	Modifying the Group Policy
-		9.	Cleaning and Backing Up the Registry
-		10. 	Bonus Info!
+		8.	Modifying the Registry to Stop Blocked Services
+		9.	Modifying the Group Policy
+		10.	Cleaning and Backing Up the Registry
+		11.	Bonus Info!
 ==================================================================================================================================================
 
 ==================================================================================================================================================
@@ -91,8 +92,7 @@ Intro:
 ==================================================================================================================================================
 Who benefits from this guide:
 If you do not intend to connect to the Microsoft Store and believe all your data is yours to keep in your own location and not a cloud environment,
-then modifying the OS may be for you. Always make sure you create able restore point to go back to if you notice something you need is no longer
-working.
+then modifying the OS may be for you. Make sure you create a restore point to go back to if you notice something you need is no longer working.
 
 This guide was created to allow users to customize/harden their Windows 10 operating system to stop data leaks. It can provide a more secure OS but
 the trade off is probably some broken applications or services needed by the user. Carefully read this guide and the options you will be modifying
@@ -102,8 +102,13 @@ You can use this guide with Windows XP, 7 and 8/8.1. Of course, they don't have 
 modifications in the same manner as explained here. Some areas are named differently on each OS but they work in the same way. By the end of this
 guide you will have a greater understanding of the Windows operating system at an advance to expert level.
 
-FYI...There is a PowerShell script (Windows10Debloater) available to remove Bloatware, but I could not get it to remove anything in version 19041.
-Therefore I do not recommend it at this time.
+FYI...There is a PowerShell script (Windows10Debloater) available to remove Bloatware, but I could not get it to remove anything in any version 
+above 10240. Therefore I do not recommend it at this time.
+
+==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
+Important!	You cannot re-install Windows applications like CAmera, Maps, Calendar, etc without going to the Microsoft Store. Make sure you do not
+			needs any of them before you uninstall them!!!
+==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
 
 ==================================================================================================================================================
@@ -113,7 +118,7 @@ This is the easy part, so enjoy it while you can.
 
 	1. In the Search Bar type and run: privacy settings
 
-	2. Go through each section in the meny and Disable (turn off) what you don't want running automatically
+	2. Go through each section in the menu and Disable (turn off) what you don't want running automatically
 
 	3. Reboot for changes to take effect
 
@@ -131,7 +136,7 @@ This step is going to take a while to complete, but necessary based on my findin
 Note: 	You'll need .NET 3.5 for ApateDNS to work. Install it before starting this step!
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-	1. Download all tools mentioned in the Tools section
+	1. Using another computer, Download all tools mentioned in the Tools section...DO NOT USE THE SAME COMPUTER OR VM YOU'RE GOING TO MODIFY!
 
 	2. Disable your Internet connection by either:
 		a.	Control Panel > Network and Sharing Center > Change Adapter Settings > Right click on the NIC icon and select Disable
@@ -139,6 +144,7 @@ Note: 	You'll need .NET 3.5 for ApateDNS to work. Install it before starting thi
 		c.	Or remove the cat5 cable
 		d. 	Right click on the Internet Access icon on the right side in the Taskbar > Open Network & Internet Settings > Status > Adapter Options
 			Right Click on your connection icon, then select Disable
+		e.	If you're using a VM then disconnect the NIC in the VM Settings
 
 	3. Install ApateDNS first
 
@@ -152,9 +158,24 @@ Note: 	You'll need .NET 3.5 for ApateDNS to work. Install it before starting thi
 
 
 ==================================================================================================================================================
-Step #3: Capturing Callouts
+Step #3: Capturing Call-Outs
 ==================================================================================================================================================
+The thing with ApateDNS is that you need .NET 3.5 for it to work. 
 
+Step #3a:
+If you cannot find it and install it without problems, you will need to do some early modifying to prevent Windows from fully updating from the 
+version that you have. So for this:
+	1. In the Search Box type and run Services
+	2. Find Windows Updates and double click on it
+	3. On the drop-down menu select Disable
+	4. If the service is running then click the Stop button
+	5. Click on Ok to save the changes
+	6. Go back Online and find the Microsoft webpage for .NET 3.5
+		(https://www.microsoft.com/en-us/download/details.aspx?id=21)
+	7. Download and Install the program
+	8. Go back Offline and continue below
+
+Step #3b:
 	1. Run ApateDNS and use DNS 127.0.0.1 then click Start
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
@@ -233,7 +254,7 @@ Note:	FYI the CALC may be the only one you will need and you need to block it fr
 		This can save memory on low memory systems
 
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
-Important!	Do not disable any Antivirus or security program!
+Important!	DO NOT disable any Antivirus or security program!
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
 
@@ -249,8 +270,8 @@ Important!	Do not disable any Antivirus or security program!
 	5. If anything shows up in Glasswire, make sure you block it by selecting the Fire icon next to the alert
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Note: 	If you don't want to keep CCleaner then uninstall it when you're done...If you're going to keep it, secure it with the steps I've mentioned
-	above but also disable the Autorun, Auto Update and Monitoring features in its Settings tab
+Note:	If you don't want to keep CCleaner then uninstall it when you're done...If you're going to keep it, secure it with the steps I've mentioned
+		above but also disable the Autorun, Auto Update and Monitoring features in its Settings tab
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -286,9 +307,19 @@ the Firewall settings and again them in a safe place. But first lets modify the 
 		c. Any Modules that have been removed or still being used
 		d. Any other programs you don't want them to call-out to their home servers
 
+	9. Disable any of the Windows Apps that may be in the Firewall (Camera, Maps, Calendar, Calculator, etc.
+	
+	10. Disable all DOMAIN and PUBLIC rules, but do not disable PUBLIC if you're going to use a Laptop
+	
+	11. While you're here, Disable Glasswire Service
+	
+	12. Click on Outbound Rules
+	
+	13. Basically Disable all PUBLIC and DOMAIN rules, all IPv6, any Windows Apps like before
+	
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	You can delete the firewall rules for the Windows modules or just disable them! Just know that if you're still using them, they will
-	message you asking for a way out. Disabling them is the easiest way to block them. Also notice all the Glasswire rules...to view them:
+		message you asking for a way out. Disabling them is the easiest way to block them. Also notice all the Glasswire rules...to view them:
 			a. Double click on one of them
 			b. Select Program and Services tab
 			c. Find the name of the application being blocked
@@ -301,7 +332,8 @@ Note: 	I highly suggest for all to get smart on the default firewall rules. Use 
 ==================================================================================================================================================
 Step #6: Exporting Firewall Rules and Hosts File Changes for Backup
 ==================================================================================================================================================
-Exporting them is very important...you don't want to redo all of this from scratch if you have to reinstall the OS later on!
+Exporting them is very important...you don't want to redo all of them from scratch if you have to reinstall the OS later on. You can also move them
+to another system if you want to.
 
 	1. Once you are done modifying the Firewall:
 		a. On the left menu select Windows Defender Firewall with Advance Security on Local Computer
@@ -326,7 +358,7 @@ Bluetooth, Error Reporting and *Windows Event Logon.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	*If you turn off Windows Event Logon it will also turn off Network List Services and Network Location Awareness which may disable the
-	Search Bar and Search Icon and you won't be able to search for anything...but this issue depends on the Window 10 version
+		Search Bar and Search Icon and you won't be able to search for anything...but this issue depends on the Window 10 version
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 	1. In the Search Bar type and run: Services
@@ -342,19 +374,54 @@ Note: 	*If you turn off Windows Event Logon it will also turn off Network List S
 		e. Save the changes
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Note: 	Some services cannot be stopped!!!
+Note: 	Some services cannot be stopped here...but I have a fix!!! See Step #8!!!
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 	4. Reboot the system and when you return don't forget to run ApateDNS to continue finding callouts!
 
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 Important!	I recommend taking screen captures using the Snipping Tool in Windows or notes to save the original settings in case you need to
-		revert them
+			revert them
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
 
 ==================================================================================================================================================
-Step #8: Modifying the Group Policy
+Step #8: Modifying the Registry to Stop Blocked Services
+==================================================================================================================================================
+As mentioned in Step #7, some services cannot be disabled but we can do it if we modify the Registry. Below are the ones you should be worried about.
+I recommend you have Services and REGEDIT screens side by side so you can see the changes happening. If changes do not happen then you may need to 
+shutdown the Services screen and return to it to refresh it.
+
+	1. Disable Windows Update Medic Service
+		a. On the Search Bar type and run REGEDIT
+		b. Go to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WaaSMedicSvc
+		c. In right pane, double click on Start registry DWORD to modify its Value data
+		d. Set the Value data to 4 to disable Windows Update Medic Service
+		e. Click OK
+		
+	2. Disable Auto-activation feature
+		a. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform\Activation
+		b. Select MANUAL and change to 4 to disable
+
+	3. Disable Update Orchestrator
+		a. Go to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UsoSvc
+		b. Select START and change to 4 to disable
+		c. Go to Task Manager > Services tab
+		d. STOP the service from there
+
+	4. Disable OneSync_c523 Service
+		a. HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\OneSyncSvc_c523d
+		b. Select START and change to 4 to disable
+
+	5. Close REGEDIT to save the changes
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Note:	You can also Export the Registry but before you do, use Wise Registry Cleaner to clean it, then Export it
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+==================================================================================================================================================
+Step #9: Modifying the Group Policy
 ==================================================================================================================================================
 Ok...almost done! I've left the longest step in this guide for last. FYI...Some rules state Allow while others state Turn Off...read what they say
 then make the necessary changes by double-clicking on them. I highly recommend you checking all of the other folders here so you can get a sense
@@ -378,12 +445,12 @@ Note: 	By default Policies will read "Not configured" which is the same to say t
 		description
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	If you see an icon of an arrow pointing down, it means that the Service was turned off. You don't need to do anything in Group Policy
-	unless you want to. But since this is Paranoid mode then...
+		unless you want to. But since this is Paranoid mode then...
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 ==================================================================================================================================================
-Step #9: Cleaning and Backing Up the Registry
+Step #10: Cleaning and Backing Up the Registry
 ==================================================================================================================================================
 The last thing to do is clear the registry from all the dead registry keys left from all the removing and modifications. This is another easy
 part.
@@ -402,26 +469,22 @@ part.
 
 
 ==================================================================================================================================================
-Step #10: Bonus Info!
+Step #11: Bonus Info!
 ==================================================================================================================================================
 1. GodMode:
 What if I told you there is such a thing as GodMode in Windows? Yes! Just like a video game where you can have access to every available option or
-make your character invinsible you can have access to all the Windows user features in one single screen. To do this:
+make your character invincible you can have access to all the Windows user features in one single screen. To do this:
 	a. In Desktop create a new Folder
-
 	b. Right click on it and copy and paste this: GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
-
 	c. Hit the Enter keys
 
 	These options are not Group Policy or Services options but user options. But it gives you even more control and modification of the OS.
 
-2. Stop Windows from Remembering:
+2. Stop Windows from Remembering stuff:
 This option can disable Windows from remembering files that were opened.
 
 	a. In the Search Bar type and run gpedit.msc
-
 	b. Open User Configuration > Administrative Templates > Start Menu and Taskbar
-
 	c. Double click on Do not keep history of recently opened documents and Enable this Policy
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
@@ -432,8 +495,8 @@ Note:
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 3. Even more options!
-I know, I know...by now you have spend probably close to 3 hours navigating all these exiting options and now I gave you about another hour of
-bonus options...I just love digging into Windows and finding ways to customize it. So for my last options I give you msconfig!
+I know, I know...by now you have spend probably close to 4 hours navigating all these exiting options and now I gave you about another hour of
+bonus options...I just love digging into Windows and finding ways to customize it. So for my last options I give you MSCONFIG!
 
 	a. In the Search Bar type and run: msconfig
 	b. On the pop-up go to the Boot tab then the Advance options... button
@@ -443,6 +506,21 @@ bonus options...I just love digging into Windows and finding ways to customize i
 
 FYI, you can create shortcuts to the Desktop of the Firewall, Resources and other options.
 
+And just in case:
+Disable Auto-activation feature (Windows 7)
+	1. HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SL\Activation
+	2. Select START and change to 1 to disable
+
+Windows 7 Registry Settings
+	0 - Allow (default)
+	1 - Disable 
+
+Windows 10 Registry Settings
+	0 - Boot
+	1 - System
+	2 - Automatic
+	3 - Manual
+	4 - Disable
 
 ==================================================================================================================================================
 Final Words!
