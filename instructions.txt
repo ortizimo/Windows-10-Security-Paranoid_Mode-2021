@@ -13,14 +13,16 @@ Copyright ©2021 Saulo S. Ortiz. All Rights Reserved!
 
 **************************************************************************************************************************************************
 Update #1: 20210131
-Tried another VM session as an experiment to see if this version (18362) would update before doing any heavy modifications. I did perform one
-modification before updating which was disabling the Windows Update Medic Service in the registry, then ran updates and install them. After 
-rebooting I then disabled the regular Windows Update. I'm happy to announce that after the updates, all sections of this guide still worked.
+As an experiment, I've tried another VM session to see if version (18362) would update before doing any heavy modifications. I did perform one
+small modification before updating, which was disabling the Windows Update Medic Service in the registry, then ran updates and install them. After 
+rebooting, I then disabled the regular Windows Update and continued all other modificcation as per the guide. I'm happy to announce that after the
+updates, all sections of this guide still worked.
 
 Issue:
-At this time, I cannot find where the blockage for Updating Windows is. Allowing both Windows Update Service and the Windows Update Medic Service
-as they were would not allow me to update. This issue could lie in the Group Policy, Registry or Firewall. More to come on this once I discover 
-where the issue lies. In the mean time, update before you start this guide.
+At this time, I cannot find where the blockage for Updating Windows is. I'm tring to find out if I can do all these modifications and also have 
+updating capabilities. Enabling both Windows Update Service and the Windows Update Medic Service would not allow me to do this. This issue could 
+lie in the Group Policy, Registry or Firewall. More to come on this once I discover where the issue lies. In the mean time, update before you start 
+this guide.
 **************************************************************************************************************************************************
 
 
@@ -125,7 +127,7 @@ modifications in the same manner as explained here. Some areas are named differe
 guide you will have an advance to expert understanding of the Windows operating system.
 
 FYI...There is a PowerShell script (Windows10Debloater) available to remove Bloatware, but I could not get it to remove anything in any version
-above 10240. Therefore, I do not recommend it at this time.
+above 10240 even though it stated it did. Therefore, I do not recommend it at this time.
 
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 Important!	You cannot re-install Windows applications like CAmera, Maps, Calendar, etc without going to the Microsoft Store. Make sure you do not
