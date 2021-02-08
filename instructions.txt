@@ -3,7 +3,7 @@ Straightforward Training™
 Windows 10 Security (Paranoid Mode) aka Threat Level Midnight!
 Author: Saulo S. Ortiz
 Date: 20210113
-Update: 20210131
+Update: 20210207
 Contact: thetiredretired@gmail[.]com
 ********************************************************
 Copyright ©2021 Saulo S. Ortiz. All Rights Reserved!
@@ -12,6 +12,9 @@ Copyright ©2021 Saulo S. Ortiz. All Rights Reserved!
 *** No reproduction/modification of this guide is allowed for commercial purposes without explicit written permission from the author! ***
 
 **************************************************************************************************************************************************
+Update #2: 20210207
+Added three new registry modifications to Step #9 to disable the Activate Windows watermark.
+
 Update #1: 20210131
 As an experiment, I've tried another VM session to see if version (18362) would update before doing any heavy modifications. I did perform one
 small modification before updating, which was disabling the Windows Update Medic Service in the registry, then ran updates and install them. After 
@@ -447,6 +450,28 @@ shutdown the Services screen and return to it to refresh it.
 	2. Disable Auto-activation feature
 		a. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform\Activation
 		b. Select MANUAL and change to 4 to disable
+		
+	3. Disable Auto-activation feature Alternate #1
+		a. Computer\HKEY_CURRENT_USER\Control Panel\Desktop
+		b. Go to PaintDesktopVersion and change to 4
+
+	4. Disable Auto-activation feature Alternate #2
+		a. Kill the process in notepad++ open a new page
+		b. type:
+			@echo off
+			taskkill /F /IM explorer.exe
+			explorer.exe
+			exit
+		c. Save as remove.bat
+		d. Run as Admin
+		e. Restart
+
+	5. Disable Auto-activation feature Alternate #3
+		a. Right click on Desktop > Display settings > Notifications & Actions
+		b. Turn off:
+			Show me Windows Welcome Experience
+			Get tips, tricks and suggestions
+		c. Restart
 
 	3. Disable Update Orchestrator
 		a. Go to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UsoSvc
