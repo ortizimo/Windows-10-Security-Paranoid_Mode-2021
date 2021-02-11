@@ -13,7 +13,7 @@ Copyright ©2021 Saulo S. Ortiz. All Rights Reserved!
 
 **************************************************************************************************************************************************
 Update #3: 20210211
-Added Task Scheduler modification step as Step #12 and moved Bonus Stepsto #13 and Final Words outside steps in the Index.
+Added Task Scheduler modification step as Step #12; moved Bonus Steps to #13 and Final Words outside steps.
 
 Update #2: 20210207
 Added three new registry modifications to Step #9 to disable the Activate Windows watermark.
