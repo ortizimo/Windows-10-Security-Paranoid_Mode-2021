@@ -13,7 +13,7 @@ Copyright ©2021 Saulo S. Ortiz. All Rights Reserved!
 
 **************************************************************************************************************************************************
 Update #3: 20210211
-Added Task Scheduler modification step as Step #12 and moved Bonus to #13.
+Added Task Scheduler modification step as Step #12 and moved Bonus Stepsto #13 and Final Words outside steps in the Index.
 
 Update #2: 20210207
 Added three new registry modifications to Step #9 to disable the Activate Windows watermark.
@@ -109,20 +109,20 @@ Index:
 	About the Author
 	Disclaimer
 	Software Needed
-	Steps
-		1. 	Disabling Some Privacy Settings
-		2. 	Software Tool Setup
-		3. 	Capturing Callouts
-		4.	Removing Bloatware
-		5. 	Modifying the Firewall
-		6. 	Exporting Firewall Rules and Hosts File Changes for Backup
-		7. 	Disabling IPv6
-		8. 	Disabling Some Services
-		9. 	Modifying the Registry to Stop Blocked Services
+	Steps:
+		1. Disabling Some Privacy Settings
+		2. Software Tool Setup
+		3. Capturing Callouts
+		4. Removing Bloatware
+		5. Modifying the Firewall
+		6. Exporting Firewall Rules and Hosts File Changes for Backup
+		7. Disabling IPv6
+		8. Disabling Some Services
+		9. Modifying the Registry to Stop Blocked Services
 		10. Modifying the Group Policy
 		11. Cleaning and Backing Up the Registry
-(NEW)	12. Modifying the Task Scheduler
-	Bonus Info!
+(NEW)		12. Modifying the Task Scheduler
+		13. Bonus Info!
 	Final Words
 ==================================================================================================================================================
 
