@@ -129,8 +129,9 @@ Index:
 		13. Bonus Info!
 			- GodMode
 			- Stop Windows from Remembering
-(NEW)			- Stop Windows from Updating
 			- Even More Options!
+				- Disable Windows 7,8,10 Activiation
+(NEW)				- Stop Windows from Updating
 		14. Final Words
 ==================================================================================================================================================
 
@@ -624,7 +625,8 @@ Even more options:
 FYI, you can create shortcuts to the Desktop of the Firewall, Resources and other options.
 
 And just in case:
-	2. Disable Auto-activation feature (Windows 7)
+--------------------------------------------------------------------------------------------------------------------------------------------------
+	1. Disable Auto-activation feature (Windows 7)
 		1. HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SL\Activation
 		2. Select START and change to 1 to disable
 
@@ -638,6 +640,7 @@ And just in case:
 		2 - Automatic
 		3 - Manual
 		4 - Disable
+
 
 ==================================================================================================================================================
 Step #14: Final Words!
