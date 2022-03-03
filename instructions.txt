@@ -641,10 +641,12 @@ And just in case:
 		3 - Manual
 		4 - Disable
 	
-	2. Stop Windows from Updating. I didn't want Windows 7 going to 10. You may not want 10 going to 11. I know I don't. But there may be other
-	reasons why you don't want Windows to auto-update. You may want exclusive hands-on updates to make sure your network doesn't collapse due
-	to a bad update, or you may not want new holes in your security.
-		
+	2. Stop Windows from Updating:
+	I didn't want Windows 7 going to 10. You may not want 10 going to 11. I know I don't. But there may be other reasons why you don't want
+	Windows to auto-update. You may want exclusive hands-on updates to make sure your network doesn't collapse due to a bad update patch, or 
+	you may not want new holes in your security. At any rate here's how to stop Windows from updating.
+	
+	<FIND STEPS AT HOME AND PLACE THEM HERE>		
 
 ==================================================================================================================================================
 Step #14: Final Words!
