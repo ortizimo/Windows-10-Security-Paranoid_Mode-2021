@@ -13,7 +13,8 @@ Copyright ©2021-2022 Saulo S. Ortiz. All Rights Reserved!
 
 **************************************************************************************************************************************************
 Update #4: 20220303
-Fixed some minor typos. Added Bonus info to the index. Found it can update with all these restrictions in place. 
+Fixed some minor typos. Added Bonus info to the index. Found it can update with all these restrictions in place. Added how to stop Windows from 
+updating in Bonus step.
 
 Update #3: 20210211
 Added Task Scheduler modification step as Step #12; moved Bonus Steps to #13 and Final Words outside steps.
