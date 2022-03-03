@@ -113,23 +113,24 @@ Index:
 	Disclaimer
 	Software Needed
 	Steps:
-		1. Disabling Some Privacy Settings
-		2. Software Tool Setup
-		3. Capturing Callouts
-		4. Removing Bloatware
-		5. Modifying the Firewall
-		6. Exporting Firewall Rules and Hosts File Changes for Backup
-		7. Disabling IPv6
-		8. Disabling Some Services
-		9. Modifying the Registry to Stop Blocked Services
+		01. Disabling Some Privacy Settings
+		02. Software Tool Setup
+		03. Capturing Callouts
+		04. Removing Bloatware
+		05. Modifying the Firewall
+		06. Exporting Firewall Rules and Hosts File Changes for Backup
+		07. Disabling IPv6
+		08. Disabling Some Services
+		09. Modifying the Registry to Stop Blocked Services
 		10. Modifying the Group Policy
 		11. Cleaning and Backing Up the Registry
-(NEW)		12. Modifying the Task Scheduler
+		12. Modifying the Task Scheduler
 		13. Bonus Info!
 			- GodMode
 			- Stop Windows from Remembering
+(NEW)			- Stop Windows from Updating
 			- Even More Options!
-	Final Words
+		14. Final Words
 ==================================================================================================================================================
 
 ==================================================================================================================================================
@@ -581,7 +582,7 @@ check out before we are done.
 	
 	
 ==================================================================================================================================================
-Bonus Info!
+Step #13: Bonus Info!
 ==================================================================================================================================================
 GodMode:
 --------------------------------------------------------------------------------------------------------------------------------------------------
@@ -638,7 +639,7 @@ And just in case:
 		4 - Disable
 
 ==================================================================================================================================================
-Final Words!
+Step #14: Final Words!
 ==================================================================================================================================================
 By now I hope you have a better and greater understanding of the many options Windows has at your disposal. With them, we can even find removed 
 options like Windows Updates which Microsoft removed user access in Control Panel. I hope I have taught you something new about Windows and how 
@@ -675,5 +676,5 @@ mind, I tell you the following:
 	pre-installed in the system and get more RAM for your particular computer. FYI, Laptops tend to slow down when running from batteries.
 
 
-	Contact me if you have any questions on anything I've mentioned here, I've missed something or need clarification.
+	Contact me if you have any questions on anything I've mentioned here, I've missed something or something needs clarification.
 ==================================================================================================================================================
