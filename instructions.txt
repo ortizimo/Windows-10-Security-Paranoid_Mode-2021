@@ -517,7 +517,7 @@ Note:	You can also Export the Registry but before you do, use Wise Registry Clea
 Step #10: Modifying the Group Policy
 ==================================================================================================================================================
 Ok...almost done! I've left the longest step in this guide for last. FYI...Some rules state Allow while others state Turn Off...read what they say
-then make the necessary changes by double-clicking on them. I highly recommend you checking all of the other folders here so you can get a sense
+then make the necessary changes by double-clicking on them. I highly recommend you check all of the other folders here so you can get a sense
 of all the options you have available. You'll be amazed!
 
 	1. In the Search Bar type and run: gpedit.msc
@@ -659,29 +659,33 @@ mind, I tell you the following:
 	1. If you're missing a .dll file, DO NOT DOWNLOAD IT from just ANY website. Any "missing" dll files can be found from another system or 
 	just reinstalling the program in question. Usually DirectX is the one that gets most of these problems.
 
-	2. Malware doesn't come infected anymore...it downloads from servers once the main program is installed. The files will call-out to 
-	command-and-control servers then download their payload and do the damage. Do not install files from unknown sources. Even so-called known-sources
-	like Tu-Cows, FileHippo, etc. can contain malicious programs.
+	2. Malware doesn't necessarily come infected anymore...it downloads from servers once the main (safe) program is installed. The files will call-out to 
+	command-and-control (C2) servers then download their payload and do the damage. Do not install files from unknown sources! Even popular file servers
+	like Tu-Cows, FileHippo, etc. will contain malicious programs. So download from the developers.
 
 	3. You can easily view if a link in an email is legit by hovering your mouse over the link and waiting for a text pop-up. Also be aware of typos
 	in links like: BankofAmer1ca, 1inkedIn, etc., or redirection from a link or a message asking you to update your Browser. Automatic updates
 	from Browsers should always be on.
 
 	4. Never give your info to anyone! No company/financial institution will ever ask you to confirm anything personal like social security number, 
-	mother's maiden name, and things of that nature. That is not how they work. 
+	mother's maiden name, pin number, etc. That is not how they work.
 	
-	5. Be aware of phone scams or emails that stir fear, anger feelings or religious feelings...everything you click on, like or comment is
-	being collected and can be used against you. Fight the urge to click on a comment that stirs anger.
+	5. Be aware of phone scams or emails that stir fear, anger or religious feelings...everything you click on, like or comment is being collected
+	and can be used against you. Fight the urge to click on a comment that stirs feelings so you don't get targeted by spammens, etc.
 
 	5. Clear your cookies...ALWAYS! Set your browser to NEVER REMEMBER settings if you can. Firefox is good for this option and gets updates faster
 	that any other browser.
 	
-	6. Do not fall for the "computer is slow, then use this program" commercials and pop-ups that advertise fixes from online technicians...they are
-	not. You will be infected. Use CCleaner or Wise to clean and streamline your Registry (don't forget to block them). Also Windows comes with
-	a Defragmenter you can use to streamline the HDD unless you have an SDD then you don't really need to defrag.
+	6. Do not fall for the "computer is slow? then use this program" scam. TV commercials and pop-ups that advertise fixes from online technicians are fake. 
+	You will get infected and your important documents exfiltrated. Learn how to fix stuff by yourself and use tools like CCleaner or Wise Cleaner to clean
+	and streamline your Registry (don't forget to block them). Also Windows comes with a Defragmenter you can use to streamline the HDD unless you have an 
+	SDD then you don't really need to defrag. Also, be careful with these two programs I've mentioned. I've seen them both communicating to China. I use
+	them and block them from outgoing communication using Glasswire.
 	
-	7. If you buy a cheap computer then you will have a slow computer. Get rid of all the Bloatware from Windows and any other programs already
-	pre-installed in the system and get more RAM for your particular computer. FYI, Laptops tend to slow down when running from batteries.
+	7. Shouldn't need to tell you this but , if you buy a cheap computer then you will have a slow computer. So buy a good and fast computer that will last
+	you years. Something with a Six-core, 32GB Get and 1TB HDD/SSD are the best. You may just need to update the GPU unless you don't plan to play graphic
+	intensive games. Get rid of all the Bloatware from Windows and any other programs already pre-installed in the system. FYI, Laptops tend to slow down 
+	when running from batteries.
 
 
 	Contact me if you have any questions on anything I've mentioned here, I've missed something or something needs clarification.
