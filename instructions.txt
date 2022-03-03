@@ -1,17 +1,20 @@
 ********************************************************
 Straightforward Training™
-Windows 10 Security (Paranoid Mode) aka Threat Level Midnight!
+Windows 10 Security (Paranoid Mode) aka "Threat Level Midnight!"
 Author: Saulo S. Ortiz
 Date: 20210113
-Update: 20210211
+Update: 20220303
 Contact: thetiredretired@gmail[.]com
 ********************************************************
-Copyright ©2021 Saulo S. Ortiz. All Rights Reserved!
+Copyright ©2021-2022 Saulo S. Ortiz. All Rights Reserved!
 ********************************************************
 
 *** No reproduction/modification of this guide is allowed for commercial purposes without explicit written permission from the author! ***
 
 **************************************************************************************************************************************************
+Update #4: 20220303
+Fixed some minor typos. Added Bonus info to the index. Found it can update with all these restrictions in place. 
+
 Update #3: 20210211
 Added Task Scheduler modification step as Step #12; moved Bonus Steps to #13 and Final Words outside steps.
 
@@ -46,8 +49,8 @@ After joining the US Air Force in 1995, he continued to engage in all computers 
 and management. He went on to have his own successful side-business as a Cyber-security Consultant and SOHO Technician during and after his Air
 Force career.
 
-Today, he works as a Senior Malware Analyst for the Department of Defense. Holds 22 federal certifications, several industry leading certificates,
-and a Bachelors in Cyber Forensics/Information Security from Keiser University. He lives with his beautiful wife of 27 years whom has gifted him
+Today, he works as a Senior Cyber Forensics Analyst for the Department of Defense. Holds 29 federal certifications, several industry leading certificates,
+and a Bachelors in Cyber Forensics/Information Security from Keiser University. He lives with his beautiful wife of 28 years whom has gifted him
 with two great, but equally annoying kids.
 
 ==================================================================================================================================================
@@ -99,7 +102,7 @@ Registry backup created from using this guide, can also be found in my Google dr
 
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 Important!	Create an restore point and an Image Backup before making any changes to your system! Better yet, if enough resources are available,
-		(CPU cores, RAM, HDD space) then practice these modifications in a VM before doing them in your actual working system.
+		(CPU cores, RAM, HDD space) then practice these modifications in a VM before doing them on your actual system.
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
 ==================================================================================================================================================
@@ -123,6 +126,9 @@ Index:
 		11. Cleaning and Backing Up the Registry
 (NEW)		12. Modifying the Task Scheduler
 		13. Bonus Info!
+			- GodMode
+			- Stop Windows from Remembering
+			- Even More Options!
 	Final Words
 ==================================================================================================================================================
 
@@ -146,7 +152,7 @@ FYI...There is a PowerShell script (Windows10Debloater) available to remove Bloa
 above 10240 or install .NET 3.5 even though it stated it did. Therefore, I do not recommend it at this time.
 
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
-Important!	You cannot re-install Windows applications like CAmera, Maps, Calendar, etc without going to the Microsoft Store. Make sure you do not
+Important!	You cannot re-install Windows applications like Camera, Maps, Calendar, etc without going to the Microsoft Store. Make sure you do not
 		needs any of them before you uninstall them!!!
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
@@ -605,7 +611,7 @@ Note:
 Even more options:
 --------------------------------------------------------------------------------------------------------------------------------------------------
 	1. I know, I know...by now you have spend probably close to 4 hours navigating all these exiting options and now I gave you
-	about another hour of bonus options...I just love digging into Windows and finding ways to customize it. So for my last options, I give you
+	about another hour of bonus options...I just love digging into Windows and finding ways to customize it. So for my last options (for now), I give you
 	MSCONFIG!
 		a. In the Search Bar type and run: msconfig.msc
 		b. On the pop-up go to the Boot tab then the Advance options... button
