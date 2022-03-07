@@ -775,15 +775,22 @@ mind, I tell you the following:
 	5. Clear your cookies...ALWAYS! Set your browser to NEVER REMEMBER settings if you can. Firefox is good for this option and gets updates faster
 	that any other browser.
 	
-	6. Do not fall for the "computer is slow? then use this program" scam. TV commercials and pop-ups that advertise fixes from online technicians are fake. 
+	6. Speaking about Firefox, did you know you can also modify it to stop leakage to the internet? Open a browser and type about:config. Look for things
+	like WebRTC. Google for WebRTC leaks and any other browser leaks. Chances are you can modify the browser to stop. Also you can stop updates, reporting,
+	etc.
+	
+	7. Do not fall for the "computer is slow? then use this program" scam. TV commercials and pop-ups that advertise fixes from online technicians are fake. 
 	You will get infected and your important documents exfiltrated. Learn how to fix stuff by yourself and use tools like CCleaner or Wise Cleaner to clean
 	and streamline your Registry (don't forget to block them). Also Windows comes with a Defragmenter you can use to streamline the HDD unless you have an 
 	SDD then you don't really need to defrag. Also, be careful with these two programs I've mentioned. I've seen them both communicating to China. I use
 	them and block them from outgoing communication using Glasswire.
 	
-	7. Shouldn't need to tell you this but, if you buy a cheap computer then you will have a slow computer. So buy or better yet, build a good and fast computer that will 		last you years. Something with a Six-core or more CPU, 32GB and 1TB HDD/SSD are the best. You may just need to upgrade the GPU every 2 or 3 years unless you don't plan 	to play graphic	intensive games. Get rid of all the Bloatware from Windows and any other programs already pre-installed in the system. FYI, Laptops tend to slow down 
-	when running from batteries.
+	8. Shouldn't need to tell you this but, if you buy a cheap computer then you will have a slow computer. So buy or better yet, build a good and fast 
+	computer that will last you years. Something with a Six-core or more CPU, 32GB and 1TB HDD/SSD are the best. You may just need to upgrade the GPU 
+	every 2 or 3 years unless you don't plan to play graphic intensive games. Get rid of all the Bloatware from Windows and any other programs already 
+	pre-installed in the system. FYI, Laptops tend to slow down when running from batteries.
 
-
-	Contact me if you have any questions on anything I've mentioned here, I've missed something or something needs clarification.
+==================================================================================================================================================
+Contact me if you have any questions on anything I've mentioned here, I've missed something, you have updates or new stuff to add to this guide or 
+something needs clarification.
 ==================================================================================================================================================
