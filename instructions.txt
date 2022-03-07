@@ -9,10 +9,15 @@ Contact: thetiredretired@gmail[.]com
 Copyright ©2021-2022 Saulo S. Ortiz. All Rights Reserved!
 ********************************************************
 
-*** No reproduction/modification of this guide is allowed for commercial purposes without explicit written permission from the author! ***
+*******************************************************************************************************************************************
+*** No reproduction/modification of this guide is allowed for commercial purposes without explicit written permission from the author! 	***
+*******************************************************************************************************************************************
 
-**************************************************************************************************************************************************
-Update #4: 20220303
+==================================================================================================================================================
+Guide Updates:
+==================================================================================================================================================
+
+Update #4: 20220307
 Fixed some minor typos. Added Bonus info to the index. Found it can update with all these restrictions in place. Added how to stop Windows from 
 updating in Bonus step.
 
@@ -29,16 +34,15 @@ rebooting, I then disabled the regular Windows Update service and continued all 
 after the updates, all sections of this guide still worked. Therefore, if you want you can go ahead and install current updates then proceed with
 the guide. But keep in mind that Microsoft could black-list your OS if its not a legal copy or an update could force new settings to take effect 
 preventing you from getting further updates and/or disabling the OS until you get a legal copy. In other words...BUY IT!!!!
-**************************************************************************************************************************************************
 
-**************************************************************************************************************************************************
+==================================================================================================================================================
+Issues Found
+==================================================================================================================================================
 Issue #1: 20210113
 At this time, I cannot find where the blockage for Updating Windows is. I'm tring to find out if I can do all these modifications and also have 
 updating capabilities. Enabling both Windows Update Service and the Windows Update Medic Service would not allow me to do this. This issue could 
 lie in the Group Policy, Registry or Firewall. More to come on this once I discover where the issue lies. In the mean time, update before you start 
 this guide.
-**************************************************************************************************************************************************
-
 
 ==================================================================================================================================================
 About the Author:
@@ -57,36 +61,61 @@ whom has gifted him with two great, but equally annoying kids.
 ==================================================================================================================================================
 Disclaimer:
 ==================================================================================================================================================
-	1. This guide is written for educational purposes only. I do not encourage software piracy. Buy all the software or find trial versions of
-	them.
-	
-	2. All steps in this guide have been confirmed multiple times that will not cause any damage/corruption to data, but as always, this is not
+	1. All steps in this guide have been confirmed multiple times that will not cause any damage/corruption to data, but as always, this is not
 	100% guaranteed. So, take all the necessary steps to save all your important data to an external device before attempting this or any OS 
 	modifications. PS, Don't forget to include any browser bookmarks which almost everyone forgets to do.
 
-	3. These modifications are set for a system that will no longer accept updates (patches). I cannot guarantee that the modifications will 
+	2. These modifications are set for a system that will no longer accept updates (patches). I cannot guarantee that the modifications will 
 	remain if you continue to receive updates. More on this on a later revision.
 
-	4. The modifications performed in this guide are for a Desktop environment system. If any App functions are required by the user to perform 
+	3. The modifications performed in this guide are for a Desktop environment system. If any App functions are required by the user to perform 
 	remote work or school (video chat, smart card, remote desktop functions, etc) then skip those steps that remove these services from the system. 
 	Modifying these services on a laptop system will result in very limited to no video/audio communications, unless this is what the user wants 
 	to do.
 
-	5. Please read each modification option carefully to understand what they do before you disable or enable them. Always backup your current 
+	4. Please read each modification option carefully to understand what they do before you disable or enable them. Always backup your current 
 	Windows	settings to an external device using Windows Backup or any third party tool you prefer. Additionally, perform a restore point before 
 	modifying Windows just in case you need to go back to an earlier time. Keep in mind restore points may not fix any issues you may experience 
 	especially those that remove the Windows Apps.
 
-	6. Bloatware removed cannot be reinstalled unless you re-install the entire OS from scratch as well as Apps (Calendar, Calculator, etc!) You've 
+	5. Bloatware removed cannot be reinstalled unless you re-install the entire OS from scratch as well as Apps (Calendar, Calculator, etc!) You've 
 	been warned!
 
-	7. The steps in this guide have been tested with Windows 7 Professional, Windows 7 Ultimate and Windows 10 version 10240, 18362 and 19041. I 
+	6. The steps in this guide have been tested with Windows 7 Professional, Windows 7 Ultimate and Windows 10 version 10240, 18362 and 19041. I 
 	cannot confirm they will work with any other Windows 10 versions. This guide goes over Windows 10 (18362 and 19041) which are easier versions 
 	to modify.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	Windows 10240 has way less Bloatware than later versions, but Windows Apps are more difficult to remove. Cortana cannot be removed in
 	version 10240 or above.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+==================================================================================================================================================
+Intro:
+==================================================================================================================================================
+Who Benefits from using this Guide?
+If you do not intend to connect to the Microsoft Store to download apps; believe all your data is yours to keep in your own location and not a
+cloud environment (among other privacy concerns), then modifying the OS may be for you! 
+
+This guide was created to allow users to customize/harden their Windows 10 operating system to stop data leaks, stop remote and update services 
+among other things. It can also provide a more secure OS, but the trade off is probably some broken applications or services needed by the user. 
+Carefully read this guide and the options you will be modifying in Windows to know if you'll need them or not.
+
+You can use this guide with Windows XP, 7 and 8/8.1. Of course, they don't have the Bloatware Windows 10 has, but you can do the rest of the
+modifications in the same manner as explained here with some minor research on the correct paths/etc since some may have changed from the legacy
+systems to Windows 10. Some areas are named differently on each OS, but they work in same way. By the end of this guide you will have an advance
+to expert understanding of the Windows operating system.
+
+FYI, There is a PowerShell script (Windows10Debloater) available to remove Bloatware, but I could not get it to remove anything in any version
+above 10240 or to install .NET 3.5 even though it stated it did. Therefore, I do not recommend it at this time.
+
+==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
+Important!	You cannot re-install Windows applications like Camera, Maps, Calendar, etc without going to the Microsoft Store. Make sure you do not
+		needs any of them before you uninstall them!!!
+==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Note: Make sure you create a restore point to go back to if you notice something you need is no longer working. An Image Backup is better to do.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 ==================================================================================================================================================
@@ -113,11 +142,14 @@ Important!	Create an restore point and an Image Backup before making any changes
 ==================================================================================================================================================
 Index:
 ==================================================================================================================================================
-	Issues / Updates
-	About the Author
-	Disclaimer
-	Software Needed
-	Steps:
+	- Guide Updates
+	- Issues Found
+	- About the Author
+	- Disclaimer
+	- Knowledge Level
+	- Software Needed
+	- Index
+	- Steps:
 		01. Disabling Some Privacy Settings
 		02. Software Tool Setup
 		03. Capturing Callouts
@@ -136,32 +168,8 @@ Index:
 			- Set the Number of Cores/RAM
 			- Disable Windows 7,8,10 Activation
 (NEW)			- Stop Windows from Updating
-		14. Final Words
+	- Final Words
 ==================================================================================================================================================
-
-==================================================================================================================================================
-Intro:
-==================================================================================================================================================
-Who benefits from this guide:
-If you do not intend to connect to the Microsoft Store to download apps; believe all your data is yours to keep in your own location and not a
-cloud environment (among other privacy concerns), then modifying the OS may be for you! Make sure you create a restore point to go back to if you
-notice something you need is no longer working. An Image Backup is better.
-
-This guide was created to allow users to customize/harden their Windows 10 operating system to stop data leaks. It can provide a more secure OS but
-the trade off is probably some broken applications or services needed by the user. Carefully read this guide and the options you will be modifying
-in Windows to know if you'll need them or not.
-
-You can use this guide with Windows XP, 7 and 8/8.1. Of course, they don't have the Bloatware Windows 10 has, but you can do the rest of the
-modifications in the same manner as explained here. Some areas are named differently on each OS, but they work in the same way. By the end of this
-guide you will have an advance to expert understanding of the Windows operating system.
-
-FYI...There is a PowerShell script (Windows10Debloater) available to remove Bloatware, but I could not get it to remove anything in any version
-above 10240 or install .NET 3.5 even though it stated it did. Therefore, I do not recommend it at this time.
-
-==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
-Important!	You cannot re-install Windows applications like Camera, Maps, Calendar, etc without going to the Microsoft Store. Make sure you do not
-		needs any of them before you uninstall them!!!
-==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
 
 ==================================================================================================================================================
