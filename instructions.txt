@@ -43,12 +43,12 @@ this guide.
 ==================================================================================================================================================
 About the Author:
 ==================================================================================================================================================
-A retired US Air Force Logistics Planner with two tours of war, was introduced to computers (Commodore 64) at the age of 11. During High School, 
+A retired US Air Force Logistics Planner with two tours of war, was introduced to computers (a Commodore 64) at the age of 11. During High School, 
 he found a summer job in a local "Mom's and Pop's" computer repair shop where he learned to honed his PC repair and building skills.
 
 After joining the US Air Force in 1995, he continued to engage in all computers and technology matters, and learned more about network security
-and management. He went on to have his own successful side-business as a Cyber-security Consultant and SOHO Technician during and after his Air
-Force career. From there, he went on to become the lead Malware Analyst for USCYBERCOM.
+and management. He went on to have his own successful side-business as a Computer Security Consultant and SOHO Technician during and after his Air
+Force career. After retiring from active duty, he went on to become the lead Malware Analyst for USCYBERCOM.
 
 Today, he works as a Senior Cyber-Forensics Analyst for the Department of Defense, holds 29 federal certifications, several industry leading 
 certificates, and a Bachelors in Cyber Forensics/Information Security from Keiser University. He lives with his gorgeous and funny wife of 28 years
@@ -60,27 +60,29 @@ Disclaimer:
 	1. This guide is written for educational purposes only. I do not encourage software piracy. Buy all the software or find trial versions of
 	them.
 	
-	2. These steps were tested using Windows 7 Professional and Ultimate and Windows 10 Professional. Some steps may not work under Windows Home edition.
-	
-	3. All steps in this guide have been confirmed multiple times that will not cause any damage/corruption to data, but as always, this is not
-	100% guaranteed. So, take all necessary steps to save all important data to an external device before attempting this or any OS modifications.
-	Don't forget to	include any browser bookmarks backups which almost everyone forgets to do.
+	2. All steps in this guide have been confirmed multiple times that will not cause any damage/corruption to data, but as always, this is not
+	100% guaranteed. So, take all the necessary steps to save all your important data to an external device before attempting this or any OS 
+	modifications. PS, Don't forget to include any browser bookmarks which almost everyone forgets to do.
 
-	4. These modifications are set for a system that will no longer accept updates (patches). I cannot guarantee that the modifications will remain
-	if you continue	to receive updates. More on this on a later revision.
+	3. These modifications are set for a system that will no longer accept updates (patches). I cannot guarantee that the modifications will 
+	remain if you continue to receive updates. More on this on a later revision.
 
-	5. The modification performed in this guide are for a Desktop environment system. If any App functions are required by the user to perform remote 
-	work or school (video chat, smart card, remote desktop functions, etc) then skip those steps that remove them from the system. Modifying these 
-	on a laptop system will result in very limited to no video/audio communications...unless this is what you want to do.
+	4. The modifications performed in this guide are for a Desktop environment system. If any App functions are required by the user to perform 
+	remote work or school (video chat, smart card, remote desktop functions, etc) then skip those steps that remove these services from the system. 
+	Modifying these services on a laptop system will result in very limited to no video/audio communications, unless this is what the user wants 
+	to do.
 
-	6. Please read each modification option carefully to understand what they do before you disable or enable them. Always backup your current Windows
-	settings to an external device using Windows Backup or any third party tool you prefer. Do a restore point before modifying Windows just in case 
-	you need to go back to an earlier time. Keep in mind restore points may not fix issues you may experience especially removing Apps.
+	5. Please read each modification option carefully to understand what they do before you disable or enable them. Always backup your current 
+	Windows	settings to an external device using Windows Backup or any third party tool you prefer. Additionally, perform a restore point before 
+	modifying Windows just in case you need to go back to an earlier time. Keep in mind restore points may not fix any issues you may experience 
+	especially those that remove the Windows Apps.
 
-	7. Bloatware removed cannot be reinstalled unless you re-install the entire OS from scratch! You've been warned!
+	6. Bloatware removed cannot be reinstalled unless you re-install the entire OS from scratch as well as Apps (Calendar, Calculator, etc!) You've 
+	been warned!
 
-	8. The steps in this guide have been tested with Windows 10 10240, 18362 and 19041. I cannot confirm they will work with any other Windows 10 
-	versions. This guide goes over Windows 10 (18362 and 19041) which are easier to modify.
+	7. The steps in this guide have been tested with Windows 7 Professional, Windows 7 Ultimate and Windows 10 version 10240, 18362 and 19041. I 
+	cannot confirm they will work with any other Windows 10 versions. This guide goes over Windows 10 (18362 and 19041) which are easier versions 
+	to modify.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	Windows 10240 has way less Bloatware than later versions, but Windows Apps are more difficult to remove. Cortana cannot be removed in
