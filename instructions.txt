@@ -537,7 +537,7 @@ of all the options you have available. You'll be amazed!
 		(e.g. Maps, Find My Device, *TablePC in a Desktop environment)
 
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
-Important!	*Do not disable TabletPC or anything Tablet related in both Group Policy and Services if you have a Wacom or similar peripheral!
+Important!	*Do not disable TabletPC or anything Tablet related in both Group Policy and Services if you have a WACOM or similar peripheral!
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
 	4. Carefully read each option that reads Turn Off or Enable and what they do...FYI, you need to Enable a Turn Off policy
@@ -647,27 +647,43 @@ Disable  Auto-Activation feature (Windows 7):
 	1. HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SL\Activation
 	2. Select START and change to 1 to disable
 
-		Windows 7 Registry Settings:
-			0 - Allow (default)
-			1 - Disable
+	Windows 7 Registry Settings:
+		0 - Allow (default)
+		1 - Disable
 
-		Windows 8/10 Registry Settings:
-			0 - Boot
-			1 - System
-			2 - Automatic
-			3 - Manual
-			4 - Disable
+	Windows 8/10 Registry Settings:
+		0 - Boot
+		1 - System
+		2 - Automatic
+		3 - Manual
+		4 - Disable
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Stop Windows from Updating:
 --------------------------------------------------------------------------------------------------------------------------------------------------
-I didn't want Windows 7 going to 10. You may not want 10 going to 11. I know I don't. But there may be other reasons why you don't want Windows to
-auto-update. You may want exclusive hands-on updates to make sure your network doesn't collapse due to a bad update patch, or you may not want new
-holes in your security. At any rate here's how to stop Windows from updating. FYI, this may be temporary as some people are reporting that this option
-enables again in 2 or 3 days after disabling it. I will continue to find out options and place them here.
+I didn't want Windows 7 updating to 8 or 10. You may not want 10 updating to 11. I know I don't. But there may be other reasons why you don't want 
+Windows to auto-update. You may want exclusive hands-on updates to make sure your network doesn't collapse due to a bad update patch, or you may not 
+want new holes in your security. At any rate here's how to stop Windows from updating. FYI, this may be temporary as some people are reporting that 
+this option enables again in 2 or 3 days after disabling it. I will continue to find out options and place them here.
 	
 Step #1:
-	a. 
+	1. Open Settings
+	
+	2. Click on Update & Security
+	
+	3. Click on Windows Update
+	
+	4. Click the Advanced options button
+	
+	5. Change the Pause Until option and select a year far far away!
+	
+Step #2:
+	1. Open Start
+	2. Search for gpedit.msc and click the top result to launch the Local Group Policy Editor
+	3. Navigate to the following path:
+		a. Computer Configuration > Administrative Templates > Windows Components > Windows Update
+
+	4. Double-click the Configure Automatic Updates policy on the right side
 
 ==================================================================================================================================================
 Step #14: Final Words!
