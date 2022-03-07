@@ -43,8 +43,8 @@ this guide.
 ==================================================================================================================================================
 About the Author:
 ==================================================================================================================================================
-A retired US Air Force Logistics Planner with two tours of war, was introduced to computers (Commodore 64) at the an early age (11). During High 
-School, he found a summer job in a local "Mom's and Pop's" computer repair shop where he learned to honed his PC repair and building skills.
+A retired US Air Force Logistics Planner with two tours of war, was introduced to computers (Commodore 64) at the age of 11. During High School, 
+he found a summer job in a local "Mom's and Pop's" computer repair shop where he learned to honed his PC repair and building skills.
 
 After joining the US Air Force in 1995, he continued to engage in all computers and technology matters, and learned more about network security
 and management. He went on to have his own successful side-business as a Cyber-security Consultant and SOHO Technician during and after his Air
@@ -60,24 +60,26 @@ Disclaimer:
 	1. This guide is written for educational purposes only. I do not encourage software piracy. Buy all the software or find trial versions of
 	them.
 	
-	2. All steps in this guide have been confirmed multiple times that will not cause any damage/corruption to data, but as always, this is not
+	2. These steps were tested using Windows 7 Ultimate and Windows 10 Professional. Some steps may not work under Windows Home edition.
+	
+	3. All steps in this guide have been confirmed multiple times that will not cause any damage/corruption to data, but as always, this is not
 	100% guaranteed. So, take all necessary steps to save all important data to an external device before attempting this or any OS modifications.
 	Don't forget to	include any browser bookmarks backups which almost everyone forgets to do.
 
-	3. These modifications are set for a system that will no longer accept updates (patches). I cannot guarantee that the modifications will remain
+	4. These modifications are set for a system that will no longer accept updates (patches). I cannot guarantee that the modifications will remain
 	if you continue	to receive updates. More on this on a later revision.
 
-	4. The modification performed in this guide are for a Desktop environment system. If any App functions are required by the user to perform remote 
+	5. The modification performed in this guide are for a Desktop environment system. If any App functions are required by the user to perform remote 
 	work or school (video chat, smart card, remote desktop functions, etc) then skip those steps that remove them from the system. Modifying these 
 	on a laptop system will result in very limited to no video/audio communications...unless this is what you want to do.
 
-	5. Please read each modification option carefully to understand what they do before you disable or enable them. Always backup your current Windows
+	6. Please read each modification option carefully to understand what they do before you disable or enable them. Always backup your current Windows
 	settings to an external device using Windows Backup or any third party tool you prefer. Do a restore point before modifying Windows just in case 
 	you need to go back to an earlier time. Keep in mind restore points may not fix issues you may experience especially removing Apps.
 
-	6. Bloatware removed cannot be reinstalled unless you re-install the entire OS from scratch! You've been warned!
+	7. Bloatware removed cannot be reinstalled unless you re-install the entire OS from scratch! You've been warned!
 
-	7. The steps in this guide have been tested with Windows 10 10240, 18362 and 19041. I cannot confirm they will work with any other Windows 10 
+	8. The steps in this guide have been tested with Windows 10 10240, 18362 and 19041. I cannot confirm they will work with any other Windows 10 
 	versions. This guide goes over Windows 10 (18362 and 19041) which are easier to modify.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
@@ -93,7 +95,7 @@ Knowledge Level:	Beginner to Advance
 Software needed:
 ==================================================================================================================================================
 	-Glasswire 1.2 (only use this old version...newest version is no longer free)
-	-ApateDNS (FireEye/Free)
+	-FakeNet or ApateDNS (FireEye/Free)
 	-CCleaner 5.6.7 (tested with this guide)
 	-Notepad++ (any version will work)
 	-Wise Registry Cleaner 9.4.7.619 (tested with this guide)
@@ -216,13 +218,20 @@ Step #3a:
 If you cannot find it and install it without problems, you will need to do some early modifying to prevent Windows from fully updating from the
 version that you have. So for this:
 	1. In the Search Box type and run: Services
+	
 	2. Find Windows Updates and double click on it
+	
 	3. On the drop-down menu select Disable
+	
 	4. If the service is running then click the Stop button
+	
 	5. Click on Ok to save the changes
+	
 	6. Go back Online and find the Microsoft webpage for .NET 3.5
 		(https://www.microsoft.com/en-us/download/details.aspx?id=21)
+	
 	7. Download and Install the program
+	
 	8. Go back Offline and continue below
 
 Step #3b:
@@ -644,7 +653,8 @@ And just in case:
 	2. Stop Windows from Updating:
 	I didn't want Windows 7 going to 10. You may not want 10 going to 11. I know I don't. But there may be other reasons why you don't want
 	Windows to auto-update. You may want exclusive hands-on updates to make sure your network doesn't collapse due to a bad update patch, or 
-	you may not want new holes in your security. At any rate here's how to stop Windows from updating.
+	you may not want new holes in your security. At any rate here's how to stop Windows from updating. FYI, this may be temporary as some people 
+	are reporting that this option enables again in 2 or 3 days after disabling it. I will continue to find out options and place them here.
 	
 	<FIND STEPS AT HOME AND PLACE THEM HERE>		
 
@@ -684,9 +694,7 @@ mind, I tell you the following:
 	SDD then you don't really need to defrag. Also, be careful with these two programs I've mentioned. I've seen them both communicating to China. I use
 	them and block them from outgoing communication using Glasswire.
 	
-	7. Shouldn't need to tell you this but , if you buy a cheap computer then you will have a slow computer. So buy a good and fast computer that will last
-	you years. Something with a Six-core, 32GB Get and 1TB HDD/SSD are the best. You may just need to update the GPU unless you don't plan to play graphic
-	intensive games. Get rid of all the Bloatware from Windows and any other programs already pre-installed in the system. FYI, Laptops tend to slow down 
+	7. Shouldn't need to tell you this but, if you buy a cheap computer then you will have a slow computer. So buy or better yet, build a good and fast computer that will 		last you years. Something with a Six-core or more CPU, 32GB and 1TB HDD/SSD are the best. You may just need to upgrade the GPU every 2 or 3 years unless you don't plan 	to play graphic	intensive games. Get rid of all the Bloatware from Windows and any other programs already pre-installed in the system. FYI, Laptops tend to slow down 
 	when running from batteries.
 
 
