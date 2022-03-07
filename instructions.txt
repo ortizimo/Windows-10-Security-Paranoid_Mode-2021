@@ -674,18 +674,16 @@ Step #1 (Settings):
 	5. Change the Pause Until option and select a year far far away!
 	
 Step #2 (Group Policies):
-	1. Open Start
+	1. Type/run gpedit.msc
 	
-	2. Search for gpedit.msc and click the top result to launch the Local Group Policy Editor
-	
-	3. Navigate to the following path:
+	2.Go to the following path:
 		a. Computer Configuration > Administrative Templates > Windows Components > Windows Update
 	
-	4. Double-click the Configure Automatic Updates policy on the right side
+	3. Double-click the Configure Automatic Updates policy option on the right side
 	
-	5. Check the Disabled option to turn off automatic Windows 10 updates permanently
+	4. Select the Disabled option to turn off automatic Windows 10 updates permanently
 	
-	6. Click the Apply, then the OK button
+	5. Click the Apply, then the OK button
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: DO NOT EXIT GROUP POLICY EDITOR YET!!!
@@ -694,18 +692,14 @@ Note: DO NOT EXIT GROUP POLICY EDITOR YET!!!
 Step #3 (Limit Updates):
 While still in the Groupt Policy Editor:
 
-	1. Open Start
-
-	2. Search for gpedit.msc and select the top result to launch the experience
-
-	3. Navigate to the following path:
+	1. Navigate to the following path:
 		a. Computer Configuration > Administrative Templates > Windows Components > Windows Update
 
-	4. Double-click the Configure Automatic Updates policy on the right side
+	2. Double-click the Configure Automatic Updates policy on the right side
 	
-	5. Check the Enable option to turn on the policy
+	3. Check the Enable option to turn on the policy
 
-	6. Under the "Options" section, select: 
+	4. Under the "Options" section, select: 
 		a. 2 — Notify for download and auto install
 			i. This option prevent updates from downloading automatically
 
@@ -715,34 +709,38 @@ While still in the Groupt Policy Editor:
 		d. 5 — Allow local admin to choose setting
 		e. 7 — Auto Download, Notify to install, Notify to Restart
 
-	7. Click the Apply, then the OK button
+	5. Click the Apply, then the OK button
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Note: The best option to disable automatic updates is (2 — Notify for download and auto install). If you choose option 2, updates won't download 
-automatically. Instead, you'll get an "Install Now" button in the Windows Update settings page to do it manually.
+Note: The best option to disable automatic updates is (2 — Notify for download and auto install). This option won't download updates automatically. 
+Instead, you'll get an "Install Now" button in the Windows Update settings page to do it manually.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 Step #4: (Edit the Registry)
 	
 	1. Type/run regedit
 		
-	3. Find the following:
+	3. Find the following path:
 		a. HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows
 	
-	4. Right-click the Windows folder then select New submenu
+	4. Right-click the Windows (folder) key, select the New submenu and select the Key option
 	
 	5. Choose Key then select DWORD32 option
 	
-	6. Crete a new key and name it WindowsUpdate, this will create a new folder
+	6. Create a new key and name it WindowsUpdate
+			i. This will create a new folder
 		
-	7. 
+	7. Right-click the new key, then select the New submenu and select the Key option
 	
-	7. Select it and double click on it
+	8. Name the new key AU and press Enter
 	
-	8. Name the new key NoAutoUpdate and press Enter
+	9. Right-click the AU key, then select the New submenu and select DWORD32
 	
-	9. Double-click the newly created key and change its value from 0 to 1
+	10. Name the new key NoAutoUpdate and press Enter
 	
+	11. Double-click the new key and change its value from 0 to 1
+	
+	12. Click the OK button then restart the computer
 	
 
 ==================================================================================================================================================
