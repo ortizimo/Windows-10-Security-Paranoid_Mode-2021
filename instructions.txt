@@ -131,9 +131,9 @@ Index:
 		13. Bonus Info!
 			- GodMode
 			- Stop Windows from Remembering
-			- Even More Options!
-				- Disable Windows 7,8,10 Activiation
-(NEW)				- Stop Windows from Updating
+			- Set the Number of Cores/RAM
+			- Disable Windows 7,8,10 Activation
+(NEW)			- Stop Windows from Updating
 		14. Final Words
 ==================================================================================================================================================
 
@@ -320,7 +320,7 @@ Important!	DO NOT disable any Antivirus or security program!
 	3. Just like before, open the hosts file in Notepad++ as Administrator and type under all the default commented out statements any new findings
 	Example:
 		127.0.0.1		adobe.updates.com			#Adobe Reader 11.01
-		127.0.0.1		Any_ApateDNS_Findings		#Your_Comment_Here_To_Indicate_From_Where_This_is_Coming_From
+		127.0.0.1		Any_ApateDNS_Findings			#Your_Comment_Here_To_Indicate_From_Where_This_is_Coming_From
 
 	4. Leave it running for a while to capture all of the call-outs...also do it after a few reboots and try all your software if you want to stop
 	leaks. For example, why does File Explorer need to connect to the Internet?! Why does CALC also connects? These applications should just RUN
@@ -370,9 +370,9 @@ Inbound and the Outbound Firewall rules. First the Inbound.
 
 	9. Disable any of the Windows Apps that may be in the Firewall (Camera, Maps, Calendar, Calculator, etc.
 
-	10. Disable all DOMAIN and PUBLIC rules, but do not disable PUBLIC if you're going to use a Laptop
+	10. Disable all DOMAIN and PUBLIC rules, but do not disable PUBLIC if you're using a Laptop in public places
 
-	11. While you're here, Disable Glasswire Service
+	11. While you're here, Disable Glasswire Service (stops it from updating)
 
 	12. Click on Outbound Rules
 
@@ -438,7 +438,7 @@ Bluetooth, Error Reporting and *Windows Event Logon, Telemetry.
 
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 Important!	I recommend taking screen captures using the Snipping Tool in Windows or taking notes to save the original settings in case you need
-		to revert back to them to make something you need work
+		to revert back to them to make some services work again
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
@@ -595,7 +595,8 @@ check out before we are done.
 ==================================================================================================================================================
 Step #13: Bonus Info!
 ==================================================================================================================================================
-GodMode:
+
+1. GodMode:
 --------------------------------------------------------------------------------------------------------------------------------------------------
 	1. What if I told you there is such a thing as GodMode in Windows? Yes! Just like a video game where you can have access to every available 
 	option or make your character invincible you can have access to all the Windows user features in one single screen.
@@ -606,7 +607,8 @@ GodMode:
 
 These options are not Group Policy or Services options but user options. But it gives you even more control of the OS.
 
-Stop Windows from Remembering stuff:
+
+2. Stop Windows from Remembering Stuff:
 --------------------------------------------------------------------------------------------------------------------------------------------------
 	1. This option can disable Windows from remembering files that were opened.
 		a. In the Search Bar type and run: gpedit.msc
@@ -620,37 +622,36 @@ Note:
 	c. These options are per user account and cannot be applied Globally in the system
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Even more options:
+
+3. Set the Number of Cores/RAM:
 --------------------------------------------------------------------------------------------------------------------------------------------------
-	1. I know, I know...by now you have spend probably close to 4 hours navigating all these exiting options and now I gave you
-	about another hour of bonus options...I just love digging into Windows and finding ways to customize it. So for my last options (for now), I give you
-	MSCONFIG!
-		a. In the Search Bar type and run: msconfig.msc
-		b. On the pop-up go to the Boot tab then the Advance options... button
-		c. If you have a multi-core CPU (and we all do now a-days) you have to wonder why Windows doesn't recognize them...not all programs use all
-		CPU, but you can tell it here to show you all CPUs by changing the Number of Processors as well as the Maximum Memory.
-		d. While you're here, check the other tabs
+	1. In the Search Bar type/run: msconfig.msc
+	2. On the pop-up go to the Boot tab then the Advance options... button
+	3. If you have a multi-core CPU (and we all do now a-days) you have to wonder why Windows doesn't recognize them...not all programs use all
+	CPU, but you can tell it here to show you all CPUs by changing the Number of Processors as well as the Maximum Memory.
+	4. While you're here, check the other tabs
 
 FYI, you can create shortcuts to the Desktop of the Firewall, Resources and other options.
 
-And just in case:
+
+4. Disable  Auto-Activation feature (Windows 7):
 --------------------------------------------------------------------------------------------------------------------------------------------------
-	1. Disable Auto-activation feature (Windows 7)
-		1. HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SL\Activation
-		2. Select START and change to 1 to disable
+	1. HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SL\Activation
+	2. Select START and change to 1 to disable
 
-	Windows 7 Registry Settings:
-		0 - Allow (default)
-		1 - Disable
+		Windows 7 Registry Settings:
+			0 - Allow (default)
+			1 - Disable
 
-	Windows 8/10 Registry Settings:
-		0 - Boot
-		1 - System
-		2 - Automatic
-		3 - Manual
-		4 - Disable
+		Windows 8/10 Registry Settings:
+			0 - Boot
+			1 - System
+			2 - Automatic
+			3 - Manual
+			4 - Disable
 	
-	2. Stop Windows from Updating:
+5. Stop Windows from Updating:
+--------------------------------------------------------------------------------------------------------------------------------------------------
 	I didn't want Windows 7 going to 10. You may not want 10 going to 11. I know I don't. But there may be other reasons why you don't want
 	Windows to auto-update. You may want exclusive hands-on updates to make sure your network doesn't collapse due to a bad update patch, or 
 	you may not want new holes in your security. At any rate here's how to stop Windows from updating. FYI, this may be temporary as some people 
