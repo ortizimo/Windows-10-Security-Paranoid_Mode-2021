@@ -596,34 +596,41 @@ check out before we are done.
 Step #13: Bonus Info!
 ==================================================================================================================================================
 
-1. GodMode:
 --------------------------------------------------------------------------------------------------------------------------------------------------
-	1. What if I told you there is such a thing as GodMode in Windows? Yes! Just like a video game where you can have access to every available 
-	option or make your character invincible you can have access to all the Windows user features in one single screen.
-	To do this:
-		a. In Desktop create a new Folder
-		b. Right click on it and copy and paste this: GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
-		c. Hit the Enter keys
+GodMode:
+--------------------------------------------------------------------------------------------------------------------------------------------------
+What if I told you there is such a thing as GodMode in Windows? Yes! Just like a video game where you can have access to every available option or
+make your character invincible you can have access to all the Windows user features in one single screen. To do this:
+	
+	1. In Desktop create a new Folder
+	
+	2. Right click on it and copy and paste this: GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
+	
+	3. Hit the Enter keys
 
 These options are not Group Policy or Services options but user options. But it gives you even more control of the OS.
 
 
-2. Stop Windows from Remembering Stuff:
 --------------------------------------------------------------------------------------------------------------------------------------------------
-	1. This option can disable Windows from remembering files that were opened.
-		a. In the Search Bar type and run: gpedit.msc
-		b. Open User Configuration > Administrative Templates > Start Menu and Taskbar
-		c. Double click on Do not keep history of recently opened documents and Enable this Policy
+Stop Windows from Remembering Stuff:
+--------------------------------------------------------------------------------------------------------------------------------------------------
+This option can disable Windows from remembering files that were opened.
+	
+	1. In the Search Bar type and run: gpedit.msc
+	
+	2. Open User Configuration > Administrative Templates > Start Menu and Taskbar
+	
+	3. Double click on Do not keep history of recently opened documents and Enable this Policy
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Note:
-	a. Check all other options here! How about: Clear history of recently opened documents on exit
+Note:	a. Check all other options here! How about: Clear history of recently opened documents on exit
 	b. Check the All Settings folder at the bottom of this Folder Tree and also under Computer Configuration...so many options!
 	c. These options are per user account and cannot be applied Globally in the system
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-3. Set the Number of Cores/RAM:
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Set the Number of Cores/RAM:
 --------------------------------------------------------------------------------------------------------------------------------------------------
 	1. In the Search Bar type/run: msconfig.msc
 	2. On the pop-up go to the Boot tab then the Advance options... button
@@ -634,7 +641,8 @@ Note:
 FYI, you can create shortcuts to the Desktop of the Firewall, Resources and other options.
 
 
-4. Disable  Auto-Activation feature (Windows 7):
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Disable  Auto-Activation feature (Windows 7):
 --------------------------------------------------------------------------------------------------------------------------------------------------
 	1. HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SL\Activation
 	2. Select START and change to 1 to disable
@@ -649,15 +657,17 @@ FYI, you can create shortcuts to the Desktop of the Firewall, Resources and othe
 			2 - Automatic
 			3 - Manual
 			4 - Disable
-	
-5. Stop Windows from Updating:
+
 --------------------------------------------------------------------------------------------------------------------------------------------------
-	I didn't want Windows 7 going to 10. You may not want 10 going to 11. I know I don't. But there may be other reasons why you don't want
-	Windows to auto-update. You may want exclusive hands-on updates to make sure your network doesn't collapse due to a bad update patch, or 
-	you may not want new holes in your security. At any rate here's how to stop Windows from updating. FYI, this may be temporary as some people 
-	are reporting that this option enables again in 2 or 3 days after disabling it. I will continue to find out options and place them here.
+Stop Windows from Updating:
+--------------------------------------------------------------------------------------------------------------------------------------------------
+I didn't want Windows 7 going to 10. You may not want 10 going to 11. I know I don't. But there may be other reasons why you don't want Windows to
+auto-update. You may want exclusive hands-on updates to make sure your network doesn't collapse due to a bad update patch, or you may not want new
+holes in your security. At any rate here's how to stop Windows from updating. FYI, this may be temporary as some people are reporting that this option
+enables again in 2 or 3 days after disabling it. I will continue to find out options and place them here.
 	
-	<FIND STEPS AT HOME AND PLACE THEM HERE>		
+Step #1:
+	a. 
 
 ==================================================================================================================================================
 Step #14: Final Words!
