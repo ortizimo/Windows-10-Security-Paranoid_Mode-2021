@@ -36,7 +36,7 @@ the guide. But keep in mind that Microsoft could black-list your OS if its not a
 preventing you from getting further updates and/or disabling the OS until you get a legal copy. In other words...BUY IT!!!!
 
 ==================================================================================================================================================
-Issues Found
+Issues Found:
 ==================================================================================================================================================
 Issue #1: 20210113
 At this time, I cannot find where the blockage for Updating Windows is. I'm tring to find out if I can do all these modifications and also have 
@@ -123,7 +123,7 @@ Knowledge Level:	Beginner to Advance
 ==================================================================================================================================================
 
 ==================================================================================================================================================
-Software needed:
+Software Needed:
 ==================================================================================================================================================
 	-Glasswire 1.2 (only use this old version...newest version is no longer free)
 	-FakeNet or ApateDNS (FireEye/Free)
