@@ -60,7 +60,7 @@ Disclaimer:
 	1. This guide is written for educational purposes only. I do not encourage software piracy. Buy all the software or find trial versions of
 	them.
 	
-	2. These steps were tested using Windows 7 Ultimate and Windows 10 Professional. Some steps may not work under Windows Home edition.
+	2. These steps were tested using Windows 7 Professional and Ultimate and Windows 10 Professional. Some steps may not work under Windows Home edition.
 	
 	3. All steps in this guide have been confirmed multiple times that will not cause any damage/corruption to data, but as always, this is not
 	100% guaranteed. So, take all necessary steps to save all important data to an external device before attempting this or any OS modifications.
@@ -84,7 +84,7 @@ Disclaimer:
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	Windows 10240 has way less Bloatware than later versions, but Windows Apps are more difficult to remove. Cortana cannot be removed in
-	version 10240.
+	version 10240 or above.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 ==================================================================================================================================================
