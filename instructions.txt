@@ -3,7 +3,7 @@ Straightforward Training™
 Windows 10 Security (Paranoid Mode) aka "Threat Level Midnight!"
 Author: Saulo S. Ortiz
 Date: 20210113
-Update: 20220303
+Update: 20220307
 Contact: thetiredretired@gmail[.]com
 ********************************************************
 Copyright ©2021-2022 Saulo S. Ortiz. All Rights Reserved!
@@ -600,12 +600,10 @@ Step #13: Bonus Info!
 GodMode:
 --------------------------------------------------------------------------------------------------------------------------------------------------
 What if I told you there is such a thing as GodMode in Windows? Yes! Just like a video game where you can have access to every available option or
-make your character invincible you can have access to all the Windows user features in one single screen. To do this:
+make your character invincible, you can have access to all the Windows user features in one single screen. To do this:
 	
 	1. In Desktop create a new Folder
-	
 	2. Right click on it and copy and paste this: GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
-	
 	3. Hit the Enter keys
 
 These options are not Group Policy or Services options but user options. But it gives you even more control of the OS.
@@ -617,9 +615,7 @@ Stop Windows from Remembering Stuff:
 This option can disable Windows from remembering files that were opened.
 	
 	1. In the Search Bar type and run: gpedit.msc
-	
 	2. Open User Configuration > Administrative Templates > Start Menu and Taskbar
-	
 	3. Double click on Do not keep history of recently opened documents and Enable this Policy
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
@@ -666,23 +662,29 @@ Windows to auto-update. You may want exclusive hands-on updates to make sure you
 want new holes in your security. At any rate here's how to stop Windows from updating. FYI, this may be temporary as some people are reporting that 
 this option enables again in 2 or 3 days after disabling it. I will continue to find out options and place them here.
 	
-Step #1:
+Step #1 (Settings):
 	1. Open Settings
-	
 	2. Click on Update & Security
-	
 	3. Click on Windows Update
-	
 	4. Click the Advanced options button
-	
 	5. Change the Pause Until option and select a year far far away!
 	
-Step #2:
+Step #2a (Group Policies):
 	1. Open Start
 	2. Search for gpedit.msc and click the top result to launch the Local Group Policy Editor
 	3. Navigate to the following path:
 		a. Computer Configuration > Administrative Templates > Windows Components > Windows Update
+	4. Double-click the Configure Automatic Updates policy on the right side
+	5. Check the Disabled option to turn off automatic Windows 10 updates permanently
+	6. Click the Apply then the OK button
 
+DO NOT EXIT LOCAL GROUP POLICY YET!!!
+
+Step #2b (Limit Updates)
+While still in Open Start
+	2. Search for gpedit.msc and select the top result to launch the experience
+	3. Navigate to the following path:
+		a. Computer Configuration > Administrative Templates > Windows Components > Windows Update
 	4. Double-click the Configure Automatic Updates policy on the right side
 
 ==================================================================================================================================================
