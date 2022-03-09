@@ -698,59 +698,36 @@ Step #2 (Group Policies):
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: DO NOT EXIT GROUP POLICY EDITOR YET!!!
 --------------------------------------------------------------------------------------------------------------------------------------------------
-
-Step #3 (Limit Updates):
-While still in the Groupt Policy Editor:
-
-	1. Navigate to the following path:
-		a. Computer Configuration > Administrative Templates > Windows Components > Windows Update
-
-	2. Double-click the Configure Automatic Updates policy on the right side
-	
-	3. Check the Enable option to turn on the policy
-
-	4. Under the "Options" section, select: 
+	FYI:
 		a. 2 — Notify for download and auto install
 			i. This option prevent updates from downloading automatically
-
-	FYI:
 		b. 3 — Auto download and notify for install
 		c. 4 — Auto download and schedule the install
 		d. 5 — Allow local admin to choose setting
 		e. 7 — Auto Download, Notify to install, Notify to Restart
-
-	5. Click the Apply, then the OK button
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: The best option to disable automatic updates is (2 — Notify for download and auto install). This option won't download updates automatically. 
 Instead, you'll get an "Install Now" button in the Windows Update settings page to do it manually.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Step #4: (Edit the Registry)
+Step #3: (Edit the Registry)
 	
 	1. Type/run regedit
 		
-	3. Find the following path:
+	2. Find the following path:
 		a. HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows
 	
-	4. Right-click the Windows (folder) key, select the New submenu and select the Key option
+	3. Find the key WindowsUpdate folder and open it
+			i. If not there, then create it	
 	
-	5. Choose Key then select DWORD32 option
-	
-	6. Create a new key and name it WindowsUpdate
-			i. This will create a new folder
+	4. Right-click the AU folder, then select New > DWORD32 
+			i. If not there, then create it
+			
+	5. Change the value in NoAutoUpdate from 0 to 1
+			i. If not there, then create it and change the value
 		
-	7. Right-click the new key, then select the New submenu and select the Key option
-	
-	8. Name the new key AU and press Enter
-	
-	9. Right-click the AU key, then select the New submenu and select DWORD32
-	
-	10. Name the new key NoAutoUpdate and press Enter
-	
-	11. Double-click the new key and change its value from 0 to 1
-	
-	12. Click the OK button then restart the computer
+	6. Click the OK button then restart the computer
 	
 
 ==================================================================================================================================================
