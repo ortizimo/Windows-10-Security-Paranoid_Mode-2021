@@ -681,7 +681,7 @@ Step #1 (Settings):
 	
 	4. Click the Advanced options button
 	
-	5. Change the Pause Until option and select a year far far away!
+	5. Change the Pause Until option and select the last date on the list
 	
 Step #2 (Group Policies):
 	1. Type/run gpedit.msc
@@ -695,10 +695,12 @@ Step #2 (Group Policies):
 	
 	5. Click the Apply, then the OK button
 
+
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Note: DO NOT EXIT GROUP POLICY EDITOR YET!!!
+Note: while you're here, check out other policies you can disable. FYI, some "disabling" options have to be "enabled"...read each policy carefully
+to understand what it does.
 --------------------------------------------------------------------------------------------------------------------------------------------------
-	FYI:
+	FYI: Policy Values
 		a. 2 — Notify for download and auto install
 			i. This option prevent updates from downloading automatically
 		b. 3 — Auto download and notify for install
@@ -707,8 +709,8 @@ Note: DO NOT EXIT GROUP POLICY EDITOR YET!!!
 		e. 7 — Auto Download, Notify to install, Notify to Restart
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Note: The best option to disable automatic updates is (2 — Notify for download and auto install). This option won't download updates automatically. 
-Instead, you'll get an "Install Now" button in the Windows Update settings page to do it manually.
+Note: The best option to disable automatic updates is using  (2 — Notify for download and auto install). This option won't download updates
+automatically. Instead, you'll get an "Install Now" button in the Windows Update settings page to do it manually.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 Step #3: (Edit the Registry)
@@ -718,14 +720,14 @@ Step #3: (Edit the Registry)
 	2. Find the following path:
 		a. HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows
 	
-	3. Find the key WindowsUpdate folder and open it
+	3. Find the WindowsUpdate folder and open it
 			i. If not there, then create it	
 	
 	4. Right-click the AU folder, then select New > DWORD32 
-			i. If not there, then create it
+			i. If not there, then create it and create the DWORD32
 			
-	5. Change the value in NoAutoUpdate from 0 to 1
-			i. If not there, then create it and change the value
+	5. Change the value in key NoAutoUpdate from 0 to 1
+			i. If not there, then create it and change the value to 1
 		
 	6. Click the OK button then restart the computer
 	
