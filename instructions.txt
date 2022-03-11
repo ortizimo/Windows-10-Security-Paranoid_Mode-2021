@@ -3,7 +3,7 @@ Straightforward Training™
 Windows 10 Security (Paranoid Mode) aka "Threat Level Midnight!"
 Author: Saulo S. Ortiz
 Date: 20210113
-Update: 20220307
+Update: 20220310
 Contact: thetiredretired@gmail[.]com
 ********************************************************
 Copyright ©2021-2022 Saulo S. Ortiz. All Rights Reserved!
@@ -16,6 +16,8 @@ Copyright ©2021-2022 Saulo S. Ortiz. All Rights Reserved!
 ==================================================================================================================================================
 Guide Updates:
 ==================================================================================================================================================
+Update #5: 20220310
+Fixed typos in step #3 of the 'Stop Windows from Updating' portion
 
 Update #4: 20220307
 Fixed some minor typos. Added Bonus info to the index. Found it can update with all these restrictions in place. Added how to stop Windows from 
@@ -164,7 +166,7 @@ Index:
 		12. Modifying the Task Scheduler
 		13. Bonus Info!
 			- GodMode
-			- Stop Windows from Remembering
+			- Stop Windows from Remembering Stuff
 			- Set the Number of Cores/RAM
 			- Disable Windows 7,8,10 Activation
 (NEW)			- Stop Windows from Updating
@@ -720,14 +722,14 @@ Step #3: (Edit the Registry)
 	2. Find the following path:
 		a. HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows
 	
-	3. Find the WindowsUpdate folder and open it
-			i. If not there, then create it	
+	3. Find the WindowsUpdate key (folder) and open it
+			i. If not there, create it	
 	
-	4. Right-click the AU folder, then select New > DWORD32 
-			i. If not there, then create it and create the DWORD32
+	4. Right-click the AU subkey (folder), then select New > DWORD32 
+			i. If not there, create it and create the DWORD32
 			
 	5. Change the value in key NoAutoUpdate from 0 to 1
-			i. If not there, then create it and change the value to 1
+			i. If not there, create it and change the value to 1
 		
 	6. Click the OK button then restart the computer
 	
