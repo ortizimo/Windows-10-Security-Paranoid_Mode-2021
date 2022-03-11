@@ -17,7 +17,7 @@ Copyright ©2021-2022 Saulo S. Ortiz. All Rights Reserved!
 Guide Updates:
 ==================================================================================================================================================
 Update #5: 20220310
-Fixed typos in step #3 of the 'Stop Windows from Updating' portion
+Fixed typos in step #3 of the 'Stop Windows from Updating' section. Updated Issue #1 information below.
 
 Update #4: 20220307
 Fixed some minor typos. Added Bonus info to the index. Found it can update with all these restrictions in place. Added how to stop Windows from 
@@ -41,10 +41,10 @@ preventing you from getting further updates and/or disabling the OS until you ge
 Issues Found:
 ==================================================================================================================================================
 Issue #1: 20210113
-At this time, I cannot find where the blockage for Updating Windows is. I'm tring to find out if I can do all these modifications and also have 
-updating capabilities. Enabling both Windows Update Service and the Windows Update Medic Service would not allow me to do this. This issue could 
-lie in the Group Policy, Registry or Firewall. More to come on this once I discover where the issue lies. In the mean time, update before you start 
-this guide.
+At this time, I cannot find if I'm able to update manually after doing all these changes, especially after doing the steps 'Stop Windows from Updating'
+in the Bonus section. Enabling both Windows Update Service and the Windows Update Medic Service would not allow me to do this at this time. This issue
+could lie in the Group Policy, Registry or Firewall. More to come on this once I discover where the issue is. In the mean time, update before you start 
+this guide if you want to.
 
 ==================================================================================================================================================
 About the Author:
