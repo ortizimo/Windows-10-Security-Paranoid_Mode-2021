@@ -189,11 +189,11 @@ Index:
 		12. Cleaning and Backing Up the Registry
 		13. Modifying the Task Scheduler
 		14. Bonus Info!
-			13-1. GodMode
-			13-2. Stop Windows from Remembering Stuff
-			13-3. Set the Number of Cores/RAM
-			13-4. Disable Windows 7,8,10 Activation
-			13-5. Stop Windows from Updating
+			14-1. GodMode
+			14-2. Stop Windows from Remembering Stuff
+			14-3. Set the Number of Cores/RAM
+			14-4. Disable Windows 7,8,10 Activation
+			14-5. Stop Windows from Updating
 		15. Additional Recommended Tools for Security
 		16. Final Words
 ==================================================================================================================================================
