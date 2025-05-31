@@ -38,7 +38,7 @@ small modification before updating, which was disabling the Windows Update Medic
 After rebooting, I then disabled the regular Windows Update service and continued all other changes as per my guide. 
 
 I'm happy to announce that after the updates, all sections of this guide still worked. Therefore, if you want you can go ahead and install current 
-updates first, then proceed with the changes in this guide. But keep in mind that Microsoft could black-list your OS if its not a legal copy or an 
+updates first, then proceed with the changes in this guide. But keep in mind that Microsoft could black-list your OS if it's not a legal copy or an 
 update could force new unforeseen settings to take effect preventing you from getting further updates and/or disabling the OS until you get a legal 
 copy. In other words...BUY IT!!!!
 
@@ -48,7 +48,7 @@ Issues Found:
 Issue #1: 20210113
 At this time, I cannot find if I'm able to update manually after doing all these changes, especially after doing the steps 'Stop Windows from Updating'
 in the Bonus section. Enabling both Windows Update Service and the Windows Update Medic Service would not allow me to do this at this time. This issue
-could lie in the Group Policy, Registry or Firewall settings. More to come on this once I discover where the issue is. In the mean time, if you want to 
+could lie in the Group Policy, Registry or Firewall settings. More to come on this once I discover where the issue is. In the meantime, if you want to 
 update do it before you start this guide.
 
 ==================================================================================================================================================
@@ -104,7 +104,7 @@ Note: 	Windows 10240 has way less Bloatware than later versions, but Windows App
 ==================================================================================================================================================
 Intro:
 ==================================================================================================================================================
-Who Benefits from using this Guide?
+Who Benefit's from using this Guide?
 Any users that do not intend to connect to the Microsoft Store to download apps; believe all your data is yours to keep within your own system and 
 not in a cloud environment (among other privacy concerns), then this guide is for you.
 
@@ -189,11 +189,11 @@ Index:
 		12. Cleaning and Backing Up the Registry
 		13. Modifying the Task Scheduler
 		14. Bonus Info!
-			14-1. GodMode
-			14-2. Stop Windows from Remembering Stuff
-			14-3. Set the Number of Cores/RAM
-			14-4. Disable Windows 7,8,10 Activation
-			14-5. Stop Windows from Updating
+			13-1. GodMode
+			13-2. Stop Windows from Remembering Stuff
+			13-3. Set the Number of Cores/RAM
+			13-4. Disable Windows 7,8,10 Activation
+			13-5. Stop Windows from Updating
 		15. Additional Recommended Tools for Security
 		16. Final Words
 ==================================================================================================================================================
@@ -368,14 +368,14 @@ Important!	DO NOT disable any Antivirus or security programs!
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note:	If you don't want to keep CCleaner then uninstall it when you're done...If you're going to keep it, secure it with the steps I've mentioned
-	above but also disable the Autorun, Auto Update and Monitoring features in its Settings tab
+	above but also disable the Autorun, Auto Update and Monitoring features in it's Settings tab
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 ==================================================================================================================================================
 Step #6: Modifying the Firewall
 ==================================================================================================================================================
 Once you are done editing the host file and modifying the Firewall through Glasswire, make sure you save a copy of the host file and also export
-the Firewall settings and again them in a safe place. But first lets modify the Firewall a little bit more. This part consists of two parts, the
+the Firewall settings and again them in a safe place. But first let's modify the Firewall a little bit more. This part consists of two parts, the
 Inbound and the Outbound Firewall rules. First the Inbound.
 
 	1. Go to:
@@ -449,8 +449,8 @@ to another system if you want to.
 ==================================================================================================================================================
 Step #8: Disabling IPv6
 ==================================================================================================================================================
-If you know anything about IPv6 you know its leaky and very unsafe. IPv6 leaks like crazy, even when you have all these modifications in place, it 
-will leak personal information. Luckily we can stop this and its easy to do.
+If you know anything about IPv6 you know it's leaky and very unsafe. IPv6 leaks like crazy, even when you have all these modifications in place, it 
+will leak personal information. Luckily we can stop this and it's easy to do.
 
 	1. On the Taskbar, right click on the Internet icon
 
@@ -482,14 +482,14 @@ Note: 	If you turn off Windows Event Logon it will also turn off Network List Se
 
 	1. In the Search Bar type and run: Services
 
-	2. Go through the list of Services and make sure you Disable them from the Drop-Down menu and also Stop the Service if its running...Look for
+	2. Go through the list of Services and make sure you Disable them from the Drop-Down menu and also Stop the Service if it's running...Look for
 	any Services that are of Privacy concerns or just plain useless for	a regular Desktop computer to have
 
 	3. To fully disable them:
 		a. Select the Service to disable and read the description
 		b. If you do not want it then double click on it
 		c. On the Startup Type drop-box select Disable
-		d. If its running select the Stop button
+		d. If it's running select the Stop button
 		e. Save the changes
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
@@ -509,7 +509,7 @@ shutdown the Services screen and return to it to refresh it.
 	1. Disable Windows Update Medic Service:
 		a. On the Search Bar type and run: Regedit
 		b. Go to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WaaSMedicSvc
-		c. In right pane, double click on Start registry DWORD to modify its Value data
+		c. In right pane, double click on Start registry DWORD to modify it's Value data
 		d. Set the Value data to 4 to disable Windows Update Medic Service
 		e. OK to save changes
 
@@ -576,7 +576,7 @@ Important!	*Do not disable TabletPC or anything Tablet related in both Group Pol
 	4. Carefully read each option that reads Turn Off or Enable and what they do...FYI, you need to Enable a Turn Off policy
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Note: 	By default, Policies will read "Not configured" which is the same to say the Policy is either On or Off depending of what it states in its
+Note: 	By default, Policies will read "Not configured" which is the same to say the Policy is either On or Off depending of what it states in it's
 	description
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	If you see an icon of an arrow pointing down, it means that the Service was turned off. You don't need to do anything in Group Policy
