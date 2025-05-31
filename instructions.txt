@@ -1,13 +1,13 @@
 ********************************************************
 Straightforward Training™
 Windows 10 Security (Paranoid Mode) aka "Threat Level Midnight!"
-Author: Saulo S. Ortiz
+Author: Saulo 'Sal' Ortiz
 Date: 20210113
-Update: 20220310
+Update: 20250528
 Contact: thetiredretired@gmail[.]com
-********************************************************
-Copyright ©2021-2022 Saulo S. Ortiz. All Rights Reserved!
-********************************************************
+************************************************************
+Copyright ©2021-2025 Saulo 'Sal' Ortiz. All Rights Reserved!
+************************************************************
 
 *******************************************************************************************************************************************
 *** No reproduction/modification of this guide is allowed for commercial purposes without explicit written permission from the author! 	***
@@ -16,6 +16,9 @@ Copyright ©2021-2022 Saulo S. Ortiz. All Rights Reserved!
 ==================================================================================================================================================
 Guide Updates:
 ==================================================================================================================================================
+Update #6: 20250528
+Revision of all verbiage and steps, added new sections; changed numbering, added Bonus Section #15, and adding Safe Mode Steps (#14-5).
+
 Update #5: 20220310
 Fixed typos in step #3 of the 'Stop Windows from Updating' section. Updated Issue #1 information below.
 
@@ -30,12 +33,14 @@ Update #2: 20210207
 Added three new registry modifications to Step #9 to disable the Activate Windows watermark.
 
 Update #1: 20210131
-As an experiment, I've tried another VM session to see if version (18362) would update before doing any heavy modifications. I did perform one
-small modification before updating, which was disabling the Windows Update Medic Service in the registry, then ran updates and install them. After 
-rebooting, I then disabled the regular Windows Update service and continued all other modificcation as per the guide. I'm happy to announce that 
-after the updates, all sections of this guide still worked. Therefore, if you want you can go ahead and install current updates then proceed with
-the guide. But keep in mind that Microsoft could black-list your OS if its not a legal copy or an update could force new settings to take effect 
-preventing you from getting further updates and/or disabling the OS until you get a legal copy. In other words...BUY IT!!!!
+As an experiment, I've tried another VM session to see if version (18362) would update before doing any heavy changes were made. I did perform one
+small modification before updating, which was disabling the Windows Update Medic Service in the registry, then ran updates and installed them. 
+After rebooting, I then disabled the regular Windows Update service and continued all other changes as per my guide. 
+
+I'm happy to announce that after the updates, all sections of this guide still worked. Therefore, if you want you can go ahead and install current 
+updates first, then proceed with the changes in this guide. But keep in mind that Microsoft could black-list your OS if its not a legal copy or an 
+update could force new unforeseen settings to take effect preventing you from getting further updates and/or disabling the OS until you get a legal 
+copy. In other words...BUY IT!!!!
 
 ==================================================================================================================================================
 Issues Found:
@@ -43,52 +48,56 @@ Issues Found:
 Issue #1: 20210113
 At this time, I cannot find if I'm able to update manually after doing all these changes, especially after doing the steps 'Stop Windows from Updating'
 in the Bonus section. Enabling both Windows Update Service and the Windows Update Medic Service would not allow me to do this at this time. This issue
-could lie in the Group Policy, Registry or Firewall. More to come on this once I discover where the issue is. In the mean time, update before you start 
-this guide if you want to.
+could lie in the Group Policy, Registry or Firewall settings. More to come on this once I discover where the issue is. In the mean time, if you want to 
+update do it before you start this guide.
 
 ==================================================================================================================================================
 About the Author:
 ==================================================================================================================================================
-A retired US Air Force Logistics Planner with two tours of war, was introduced to computers (a Commodore 64) at the age of 11. During High School, 
-he found a summer job in a local "Mom's and Pop's" computer repair shop where he learned to honed his PC repair and building skills.
+A retired US Air Force Logistics Planner (2G) with two tours of war. He was introduced to computers (a Commodore 64) then a 386SX at the age of 11. 
+During High School, he found a summer job in a local "Mom's and Pop's" computer repair shop where he learned to honed his PC repair and building 
+skills.
 
-After joining the US Air Force in 1995, he continued to engage in all computers and technology matters, and learned more about network security
-and management. He went on to have his own successful side-business as a Computer Security Consultant and SOHO Technician during and after his Air
-Force career. After retiring from active duty, he went on to become the lead Malware Analyst for USCYBERCOM.
+After joining the Air Force in 1995, he continued to engage in all computers and technology matters and learned more about network security and
+server management. He went on to have his own successful side-business as a Computer Security Consultant and Small-Office/Home Office (SOHO) 
+Technician during and after his Air Force career. 
 
-Today, he works as a Senior Cyber-Forensics Analyst for the Department of Defense, holds 29 federal certifications, several industry leading 
-certificates, and a Bachelors in Cyber Forensics/Information Security from Keiser University. He lives with his gorgeous and funny wife of 28 years
-whom has gifted him with two great, but equally annoying kids.
+After retiring from active duty, and with many computer skills under his belt, he went on to become the lead Malware Analyst for USCYBERCOM and 
+help establish the Malware Forensics office in J3.
+
+Today, he works as a Senior Cyber Forensics and Malware analyst for the ARCYBER G36, holds several industry leading certificates and a Bachelors in 
+Cyber Forensics/Information Security from Keiser University. He lives with his gorgeous and funny wife of 30+ years whom has gifted him with two 
+great, but equally annoying kids.
 
 ==================================================================================================================================================
 Disclaimer:
 ==================================================================================================================================================
-	1. All steps in this guide have been confirmed multiple times that will not cause any damage/corruption to data, but as always, this is not
-	100% guaranteed. So, take all the necessary steps to save all your important data to an external device before attempting this or any OS 
-	modifications. PS, Don't forget to include any browser bookmarks which almost everyone forgets to do.
+1. All steps in this guide have been confirmed multiple times that they will not cause any damage/corruption to data, but this 	is not 100% 
+guaranteed. Please take all the necessary steps to save all your important data to an external device before attempting this or any OS 
+modifications. Additionally, don't forget to include any browser bookmarks which almost everyone forgets to do and save any passwords manually 
+somewhere outside the system since they will not be exported with any web-browser data.
 
-	2. These modifications are set for a system that will no longer accept updates (patches). I cannot guarantee that the modifications will 
-	remain if you continue to receive updates. More on this on a later revision.
+2. These modifications are set for a system that will no longer accept updates (patches). I cannot guarantee that the modifications will remain if 
+you continue to receive updates. It is possible that any new updates disable any changes made to the OS.
 
-	3. The modifications performed in this guide are for a Desktop environment system. If any App functions are required by the user to perform 
-	remote work or school (video chat, smart card, remote desktop functions, etc) then skip those steps that remove these services from the system. 
-	Modifying these services on a laptop system will result in very limited to no video/audio communications, unless this is what the user wants 
-	to do.
+3. The modifications performed in this guide are for a Desktop environment system. If any App functions are required by the user to perform remote 
+work or school (e.g. video chat, smart card, remote desktop functions, etc.) then skip those steps that remove these type of services from the system. 
+Modifying these services on a laptop system will result in very limited to no video/audio communications, unless this is what you want to do.
 
-	4. Please read each modification option carefully to understand what they do before you disable or enable them. Always backup your current 
-	Windows	settings to an external device using Windows Backup or any third party tool you prefer. Additionally, perform a restore point before 
-	modifying Windows just in case you need to go back to an earlier time. Keep in mind restore points may not fix any issues you may experience 
-	especially those that remove the Windows Apps.
+4. Please read each modification step carefully to understand what they do before you disable or enable them. Always backup your current Windows 
+settings to an external device using Windows Backup or any third party tool you prefer. Additionally, perform a Restore Point before modifying the 
+OS just in case you need to go back to an earlier time to undo something. Keep in mind that restore points may not fix any issues you may experience, 
+especially those that remove the Windows Apps (e.g., Cortana, Weather Apps, etc.). A full image backup is best.
 
-	5. Bloatware removed cannot be reinstalled unless you re-install the entire OS from scratch as well as Apps (Calendar, Calculator, etc!) You've 
-	been warned!
+5. Bloatware removed cannot be reinstalled unless you re-install the entire OS from scratch as well as the Apps (Calendar, Calculator, etc.) or you 
+have access to the Windows Store. You've been warned!
 
-	6. The steps in this guide have been tested with Windows 7 Professional, Windows 7 Ultimate and Windows 10 version 10240, 18362 and 19041. I 
-	cannot confirm they will work with any other Windows 10 versions. This guide goes over Windows 10 (18362 and 19041) which are easier versions 
-	to modify.
+6. The steps in this guide have been tested with Windows XPSP3, Windows 7 Professional, Windows 7 Ultimate and Windows 10 version 10240, 18362 and 
+19041. I cannot confirm they will work with any other Windows 10 versions, but I don't why they should not. The latest's steps in this guide go over 
+Windows 10 (18362 and 19041) which are easier versions to modify.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Note: 	Windows 10240 has way less Bloatware than later versions, but Windows Apps are more difficult to remove. Cortana cannot be removed in
+Note: 	Windows 10240 has way less Bloatware than later versions, but Windows Apps are more difficult to remove. Cortana is harder to remove in
 	version 10240 or above.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -96,49 +105,59 @@ Note: 	Windows 10240 has way less Bloatware than later versions, but Windows App
 Intro:
 ==================================================================================================================================================
 Who Benefits from using this Guide?
-If you do not intend to connect to the Microsoft Store to download apps; believe all your data is yours to keep in your own location and not a
-cloud environment (among other privacy concerns), then modifying the OS may be for you! 
+Any users that do not intend to connect to the Microsoft Store to download apps; believe all your data is yours to keep within your own system and 
+not in a cloud environment (among other privacy concerns), then this guide is for you.
 
-This guide was created to allow users to customize/harden their Windows 10 operating system to stop data leaks, stop remote and update services 
-among other things. It can also provide a more secure OS, but the trade off is probably some broken applications or services needed by the user. 
-Carefully read this guide and the options you will be modifying in Windows to know if you'll need them or not.
+This guide was created to allow users to customize and harden their Windows 10 operating system (OS) to stop data leaks, stop remote and update 
+services etc. It can also provide a more secure OS, but the trade off is probably some broken applications and/or services a user may need later on. 
+Carefully read this guide and the options you will be modifying in the OS to know if you will want to keep them or not.
 
-You can use this guide with Windows XP, 7 and 8/8.1. Of course, they don't have the Bloatware Windows 10 has, but you can do the rest of the
-modifications in the same manner as explained here with some minor research on the correct paths/etc since some may have changed from the legacy
-systems to Windows 10. Some areas are named differently on each OS, but they work in same way. By the end of this guide you will have an advance
-to expert understanding of the Windows operating system.
+You can use this guide with Windows XP, 7 and 8/8.1. Of course, they don't have the Bloatware that Windows 10 comes with, but you can do the rest 
+of the modifications in the same manner as explained with some minor tweaking and research on the correct paths, registry keys, etc., since key 
+locations mentioned in this guide may have changed between OS versions. Additionally, some of the paths, registry keys and filenames may be named 
+differently between each OS version, but they work in same manner. 
 
-FYI, There is a PowerShell script (Windows10Debloater) available to remove Bloatware, but I could not get it to remove anything in any version
-above 10240 or to install .NET 3.5 even though it stated it did. Therefore, I do not recommend it at this time.
+By the end of this guide, you will have an advance to expert understanding of the Windows OS. Practicing these steps several times over will give 
+you a greater understanding how to safely harden any Windows OS, and use this gained knowledge as a bullet on your resume.
+
+FYI, There is a PowerShell script named Windows10Debloater available to remove Bloatware, but I could not get it to remove anything in any Win10 
+version above 10240 or install .NET 3.5 even though it stated it did. I do not recommend it at this time.
 
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
-Important!	You cannot re-install Windows applications like Camera, Maps, Calendar, etc without going to the Microsoft Store. Make sure you do not
-		needs any of them before you uninstall them!!!
+Important!	You cannot re-install Windows applications like Camera, Maps, Calendar, etc., without going to the Microsoft Store. Make sure you 
+		do not need any of them before you uninstall them!!!
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Note: Make sure you create a restore point to go back to if you notice something you need is no longer working. An Image Backup is better to do.
+Note: Make sure you create a restore point to go back to if you notice something you need is no longer working. An full Image Backup is better.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 ==================================================================================================================================================
-Knowledge Level:	Beginner to Advance
+Knowledge Level to Start:	Beginner to Advance
 ==================================================================================================================================================
+
+==================================================================================================================================================
+Before you Start: 
+==================================================================================================================================================
+Print out this guide or use it from a second computer/mobile device. Do you use it from within the same system you are trying to modify. Also, 
+disconnect the system from the internet once you have all necessary software.
 
 ==================================================================================================================================================
 Software Needed:
 ==================================================================================================================================================
-	-Glasswire 1.2 (only use this old version...newest version is no longer free)
+	-Glasswire 1.2 (only use the old version since newest version is no longer free. Find it in the WayBackMachine)
 	-FakeNet or ApateDNS (FireEye/Free)
 	-CCleaner 5.6.7 (tested with this guide)
 	-Notepad++ (any version will work)
 	-Wise Registry Cleaner 9.4.7.619 (tested with this guide)
+	-.NET 3.5 for ApateDNS use
 
-*All tools located in my Google Drive...contact me for access. Hashes will be provided for each program. Windows Firewall export, hosts file and 
-Registry backup created from using this guide, can also be found in my Google drive.
+All tools, Windows Firewall configuration exports, Windows host file and registry backups created from this guide, can be found in my Google drive. 
+Contact me for access. Hashes will be provided for each program.
 
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 Important!	Create an restore point and an Image Backup before making any changes to your system! Better yet, if enough resources are available,
-		(CPU cores, RAM, HDD space) then practice these modifications in a VM before doing them on your actual system.
+		(CPU cores, RAM, HDD space), practice these modifications in a safe virtual machine (VM) before doing them on your actual system.
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
 ==================================================================================================================================================
@@ -148,34 +167,56 @@ Index:
 	- Issues Found
 	- About the Author
 	- Disclaimer
+	- Intro
 	- Knowledge Level
+	- Before you Start
 	- Software Needed
 	- Index
-	- Steps:
-		01. Disabling Some Privacy Settings
-		02. Software Tool Setup
-		03. Capturing Callouts
-		04. Removing Bloatware
-		05. Modifying the Firewall
-		06. Exporting Firewall Rules and Hosts File Changes for Backup
-		07. Disabling IPv6
-		08. Disabling Some Services
-		09. Modifying the Registry to Stop Blocked Services
-		10. Modifying the Group Policy
-		11. Cleaning and Backing Up the Registry
-		12. Modifying the Task Scheduler
-		13. Bonus Info!
-			- GodMode
-			- Stop Windows from Remembering Stuff
-			- Set the Number of Cores/RAM
-			- Disable Windows 7,8,10 Activation
-(NEW)			- Stop Windows from Updating
-	- Final Words
+		Steps:
+		01. Initial Setup
+			1-1. Disabling Internet Access
+			1-2. Enabling view of protected files/folders
+		02. Disabling Some Privacy Settings
+		03. Software Tool Setup
+		04. Capturing Callouts
+		05. Removing Bloatware
+		06. Modifying the Firewall
+		07. Exporting Firewall Rules and Host File Changes for Backup
+		08. Disabling IPv6
+		09. Disabling Useless Services
+		10. Modifying the Registry to Stop Blocked Services
+		11. Modifying the Group Policy
+		12. Cleaning and Backing Up the Registry
+		13. Modifying the Task Scheduler
+		14. Bonus Info!
+			13-1. GodMode
+			13-2. Stop Windows from Remembering Stuff
+			13-3. Set the Number of Cores/RAM
+			13-4. Disable Windows 7,8,10 Activation
+			13-5. Stop Windows from Updating
+		15. Additional Recommended Tools for Security
+		16. Final Words
 ==================================================================================================================================================
+Step #1: Initial Setup 
+==================================================================================================================================================
+Before you start, download all the tools mentioned in the Tools section above.
 
+	1-1. Disable your Internet connection by either:
+		a. Control Panel > Network and Sharing Center > Change Adapter Settings > Right click on the NIC icon and select Disable
+		b. Or remove the USB antenna (if you have it)
+		c. Or remove the cat5 cable
+		d. Or right click on the Internet Access icon on the right side in the Taskbar > Open Network & Internet Settings 
+		Under Status click on Change adapter options, then right click on your connection icon, and select Disable
+		e. Or if you're using a VM, then disable the Network Interface Card (NIC) in the VM Settings
+
+	1-2. You will need to allow for hidden files and folders to be visible:
+		a. Control Panel > File Explorer Options > View Tab
+		b. Select Show hidden files, folders...
+		c. Uncheck Hide extensions for known file types...
+		d. Save the changes
 
 ==================================================================================================================================================
-Step #1: Disabling Some Privacy Settings
+Step #2: Disabling Some Privacy Settings
 ==================================================================================================================================================
 This is the easy part, so enjoy it while you can.
 
@@ -188,70 +229,55 @@ This is the easy part, so enjoy it while you can.
 	4. Disable any options here you do not want
 	
 	5. Reboot for changes to take effect
-
 	
 ==================================================================================================================================================
-Step #2: Software Tool Setup
+Step #3: Software Tool Setup
 ==================================================================================================================================================
 This step is going to take a while to complete, but necessary based on my findings.
-
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	You'll need .NET 3.5 for ApateDNS to work. Install it before starting this step!
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-	1. Using another computer, Download all tools mentioned in the Tools section...DO NOT USE THE SAME COMPUTER OR VM YOU'RE GOING TO MODIFY!
+	1. Install ApateDNS first and .NET 3.5
+		(https://www.microsoft.com/en-us/download/details.aspx?id=21)
 
-	2. Disable your Internet connection by either:
-		a. Control Panel > Network and Sharing Center > Change Adapter Settings > Right click on the NIC icon and select Disable
-		b. Or remove the USB antenna
-		c. Or remove the cat5 cable
-		d.  Right click on the Internet Access icon on the right side in the Taskbar > Open Network & Internet Settings > Status > Adapter Options
-		Right Click on your connection icon, then select Disable
-		e. If you're using a VM then disconnect the NIC in the VM Settings
+	2. Install Glasswire second
 
-	3. Install ApateDNS first
+	3. Install Notepad++ third
 
-	4. Install Glasswire second
+	4. Install all other software tools now
 
-	5. Install Notepad++ third
-
-	6. Install all other software tools now
-
-	7. Reboot the system for changes to take effect
-
+	5. Reboot the system for changes to take effect
 
 ==================================================================================================================================================
-Step #3: Capturing Call-Outs (Two Parts)
+Step #4: Capturing Call-Outs (Two Parts)
 ==================================================================================================================================================
 In order to get alerts on some call-out you need ApateDNS which needs .NET 3.5 for it to work. Other call-outs will be captured by Glasswire.
 More on that later on.
 
-Step #3a:
+Step #4a:
 If you cannot find it and install it without problems, you will need to do some early modifying to prevent Windows from fully updating from the
-version that you have. So for this:
+version that you have. So, for this:
+
 	1. In the Search Box type and run: Services
 	
 	2. Find Windows Updates and double click on it
 	
 	3. On the drop-down menu select Disable
+		i. If you can't select manual for now
 	
 	4. If the service is running then click the Stop button
 	
 	5. Click on Ok to save the changes
 	
-	6. Go back Online and find the Microsoft webpage for .NET 3.5
-		(https://www.microsoft.com/en-us/download/details.aspx?id=21)
+	6. Install the .NET program
 	
-	7. Download and Install the program
-	
-	8. Go back Offline and continue below
-
-Step #3b:
-	1. Run ApateDNS and use DNS 127.0.0.1 then click Start
+Step #4b:
+	1. Run ApateDNS and use DNS 127.0.0.1, then click Start
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note:	Pay attention to ApateDNS and Glasswire. If anything tries to call-out during or after tool installation, or when you run each tool, use
-	Glasswire to block them. Also you can modify the hosts file using Notepad++ and entering the URL or IP found in ApateDNS and Glasswire.
+	Glasswire to block them. Also you can modify the host file using Notepad++ and entering the URL or IP found in ApateDNS and Glasswire.
 	All this will take a while for you to capture, edit and repeat.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -263,42 +289,40 @@ Note:	Pay attention to ApateDNS and Glasswire. If anything tries to call-out dur
 Note:	To see the Glasswire Firewall rules: Control Panel > Windows Defender Firewall > Advance Settings
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-	3. To use Notepad++ to edit the Hosts file and create a loop for any call-outs to return to your host machine:
+	3. To use Notepad++ to edit the Host file and create a loop for any call-outs to return to your host machine:
 		a. Go to C:\Windows\System32\drivers\etc\
-		b. Right click on the hosts file
+		b. Right click on the host file
 		c. Select Edit with Notepad++
-		d. When you save the changes (Ctrl+S) it will ask you to open Notepad++ as administrator, select Yes for your changes to be moved to the
-		new Notepad++ instance
-		e. Save any changes
+		d. When you save the changes (Ctrl+S) it will ask you to open Notepad++ as administrator
+		e. Select Yes for your host file changes to be moved to the Notepad++ with admin rights instance
+		f. Save any changes now
+			i. You will see a warning pop-up in Glasswire that reads that the host file was modified
 
-	4. Under all the commented out statemens start a new line and enter any findings ApateDNS. Example:
-			127.0.0.1		adobe.updates.com		#Adobe Reader 11
+	4. Under all the commented out statements, start a new line and enter any findings from ApateDNS. 
+	Syntax example:
+		127.0.0.1	adobe.updates.com	#Adobe Reader 11
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Note:	A good resource for an already edited hosts file can be found in www.someonewhocares.org. I highly recommend using this server hosts file
-	for personal use. Make sure you inspect it all and change any 0.0.0.0 to 127.0.0.1. There is a difference in how these two IPs work.
---------------------------------------------------------------------------------------------------------------------------------------------------
-Note: 	You may need to allow for hidden files and folders in to be viewed:
-		a. Control Panel > File Explorer Options > View Tab
-		b. Select Show hidden files, folders...
-		c. Uncheck Hide extensions for known file types...
-		d.  Save the changes
+Note:	A good resource for an already edited host file can be found in www.someonewhocares.org. I highly recommend using this server host file
+	for personal use as well as server security. Make sure you inspect it all and change any 0.0.0.0 to 127.0.0.1. There is a difference in how 
+	these two IPs work.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Optional: To enter any Glasswire findings in the hosts file:
-		a. Move your mouse over the alert and wait for the URL or IP address to show
-		b. Using Notepad++ enter a new loop line with that information. See step #4 above.
+Optional: To enter any Glasswire findings in the host file:
+	1. Move your mouse over the new alert and wait for the URL or IP address to show
+	
+	2. Using Notepad++ enter a new loop line with that information. See step #4 above for syntax example.
 
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 Important!	Make sure you block all of these tools from calling out to their home servers, especially CCleaner, Glasswire and Wise Registry
-		Cleaner. You don't want them to update and locked you out from certain options (Glasswire) or leaks personal information (CCleaner/Wise).
+		Cleaner. You don't want them to update and locked you out from certain options (Glasswire) or leak personal information 
+		(CCleaner/Wise).
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
-
 ==================================================================================================================================================
-Step #4: Removing Bloatware
+Step #5: Removing Bloatware
 ==================================================================================================================================================
-This step is going to take a while to complete...
+This step is going to take a while to complete.
 
 Use CCleaner to remove Bloatware like MS Store, Cortana, Mail, Tips, Weather, Messaging, Eclipse, XBOX, OneDrive, People, Remote, Maps, Mixed
 Reality, etc. Depends on what you don't want to use.
@@ -322,34 +346,35 @@ Note:	FYI the CALC may be the only one you will need and you need to block it fr
 		c. Options > Updates > Uncheck all checkboxes
 		d. Options > Settings > Uncheck Run CCleaner when computer starts
 		e. Tools > Statup > Disable any program here you don't want to automatically start when Windows starts like CCleaner, SteamOS, etc.
-		This can save memory on low memory systems
+			i. This can save memory on low memory systems
 
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
-Important!	DO NOT disable any Antivirus or security program!
+Important!	DO NOT disable any Antivirus or security programs!
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
+	3. Just like before, open the host file in Notepad++ as Administrator and type under all the default commented out statements any new 
+	findings.
 
-	3. Just like before, open the hosts file in Notepad++ as Administrator and type under all the default commented out statements any new findings
 	Example:
-		127.0.0.1		adobe.updates.com			#Adobe Reader 11.01
-		127.0.0.1		Any_ApateDNS_Findings			#Your_Comment_Here_To_Indicate_From_Where_This_is_Coming_From
+		127.0.0.1	adobe.updates.com		#Adobe Reader 11.01
+		127.0.0.1	Any_ApateDNS_Findings		#Add_Your_Comment_Here_To_Indicate_From_Where_This_is_Coming_From
 
-	4. Leave it running for a while to capture all of the call-outs...also do it after a few reboots and try all your software if you want to stop
-	leaks. For example, why does File Explorer need to connect to the Internet?! Why does CALC also connects? These applications should just RUN
-	from the computer and not contact anyone for any reason!
+	4. Leave it running for a while to capture all of the call-outs, also do it after a few reboots and try all your programs/games if you want 
+	to stop	leaks. For example, why does File Explorer need to connect to the Internet?! Why does CALC also connects? These applications should 
+	just RUN from the computer and not contact anyone for any reason!
 
-	5. If anything shows up in Glasswire, make sure you block it by selecting the Fire icon next to the alert
+	5. If anything shows up in Glasswire, make sure you block it by selecting the Fire icon next to the new alert.
+			i. This creates a new firewall rule
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note:	If you don't want to keep CCleaner then uninstall it when you're done...If you're going to keep it, secure it with the steps I've mentioned
-		above but also disable the Autorun, Auto Update and Monitoring features in its Settings tab
+	above but also disable the Autorun, Auto Update and Monitoring features in its Settings tab
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-
 ==================================================================================================================================================
-Step #5: Modifying the Firewall
+Step #6: Modifying the Firewall
 ==================================================================================================================================================
-Once you are done editing the hosts file and modifying the Firewall through Glasswire, make sure you save a copy of the hosts file and also export
+Once you are done editing the host file and modifying the Firewall through Glasswire, make sure you save a copy of the host file and also export
 the Firewall settings and again them in a safe place. But first lets modify the Firewall a little bit more. This part consists of two parts, the
 Inbound and the Outbound Firewall rules. First the Inbound.
 
@@ -361,24 +386,25 @@ Inbound and the Outbound Firewall rules. First the Inbound.
 
 	3. Click on the Profile column to sort out starting with All
 
-	4. Any IPv6 settings Disable them or Block them...either way they will not be used at this moment
+	4. Disable or block any IPv6 settings
 
 	5. Disable the following:
 		a. AllJoyn Router
 		b. Any Remote Assistance/Remote Services
 		c. Any Modules that have been removed or still being used
 		d. Any other programs you don't want them to call-out to their home servers
+		e. Any useless services such as XBOXLive, telephony, etc.
 
 	6. Select Outbound Rules and sort it the same way as the Inbound Rules
 
-	7. Disable any IPV6 settings
+	7. Disable all IPv6 settings
 
 	8. Disable the following:
 		a. AllJoyn Router
 		b. Any Remote Assistance/Remote Services
 		c. Any Modules that have been removed or still being used
 		d. Any other programs you don't want them to call-out to their home servers
-		e. Any @Firewall, Connected-User-Experience, Windows Apps, Media Sharing, Cast-to-Device, Proximity, Wireless Display, etc.
+		e. Any Firewall, Connected-User-Experience, Windows Apps, Media Sharing, Cast-to-Device, Proximity, Wireless Display, etc.
 
 	9. Disable any of the Windows Apps that may be in the Firewall (Camera, Maps, Calendar, Calculator, etc.
 
@@ -391,10 +417,9 @@ Inbound and the Outbound Firewall rules. First the Inbound.
 	13. Basically Disable all PUBLIC and DOMAIN rules and any IPv6, Telemetry, Windows Apps, any Cast-to-Device, Connected Devices, Media Center,
 	and anything else that sounds you will not be using it like the @Firewall rules, Connected User Experience, etc.
 
-
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	You can delete the firewall rules for the Windows modules or just disable them! Just know that if you're still using them, they will
-	message you asking for a way out. Disabling them is the easiest way to block them. Also notice all the Glasswire rules...to view them:
+	message you asking for a way out. Disabling them is the easiest way to block them. Also notice all the Glasswire rules. To view them:
 		a. Double click on one of them
 		b. Select Program and Services tab
 		c. Find the name of the application being blocked
@@ -403,9 +428,8 @@ Note: 	I highly suggest for all to get smart on the default firewall rules. Use 
 	of and how it may affect your communications.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-
 ==================================================================================================================================================
-Step #6: Exporting Firewall Rules and Hosts File Changes for Backup
+Step #7: Exporting Firewall Rules and host File Changes for Backup
 ==================================================================================================================================================
 Exporting them is very important...you don't want to redo all of them from scratch if you have to reinstall the OS later on. You can also move them
 to another system if you want to.
@@ -414,20 +438,19 @@ to another system if you want to.
 		a. On the left menu select Windows Defender Firewall with Advance Security on Local Computer
 		b. Right click on it and select Export Policy...
 		c. Give it a name...I usually use the following format:
-			WFW20210113-1 (WindowsFireWallYearMonthDay-Version), you can use what ever you want
+			20210113-1.wfw (YearMonthDay-Version), you can name it whatever you want
 		d. Save the file in a secured device away from the computer
 		e. Save a second export in case the first one gets corrupted...it has happened to me
 
-	2. Export the hosts file:
+	2. Export the host file:
 		a. C:\Windows\System32\drivers\etc\
-		b. Copy the hosts file and save it in a secured device away from the computer and also have a second one just in case
-
+		b. Copy the host file and save it in a secured device away from the computer and also have a second one just in case
 
 ==================================================================================================================================================
-Step #7: Disabling IPv6
+Step #8: Disabling IPv6
 ==================================================================================================================================================
-If you know anything about IPv6 is that its insecure, leaky and very, unsafe. IPv6 leaks like crazy and even when you have all these modifications
-in place, it will leak personal information. Luckily we can stop this and its easy to do.
+If you know anything about IPv6 you know its leaky and very unsafe. IPv6 leaks like crazy, even when you have all these modifications in place, it 
+will leak personal information. Luckily we can stop this and its easy to do.
 
 	1. On the Taskbar, right click on the Internet icon
 
@@ -439,9 +462,8 @@ in place, it will leak personal information. Luckily we can stop this and its ea
 
 You can also go through Control Panel > Network and Sharing Center > Change Adapter Settings
 
-
 ==================================================================================================================================================
-Step #8: Disabling Some Services
+Step #9: Disabling Useless Services
 ==================================================================================================================================================
 This step will take you a bit of time to complete. Go through each one, read their description and Disable the Services depending on what they do.
 
@@ -449,13 +471,13 @@ Some Services I've disabled are: ActiveX, Smart Card, Geolocation, Windows Updat
 Bluetooth, Error Reporting and *Windows Event Logon, Telemetry.
 
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
-Important!	I recommend taking screen captures using the Snipping Tool in Windows or taking notes to save the original settings in case you need
-		to revert back to them to make some services work again
+Important!	I recommend taking screen captures using the Snipping Tool in Windows or taking notes to save the original settings in case you 
+		need to revert back to them to make some services work again
 ==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Note: 	*If you turn off Windows Event Logon it will also turn off Network List Services and Network Location Awareness which may disable the
-	Search Bar and Search Icon and you won't be able to search for anything...but this issue depends on the Window 10 version
+Note: 	If you turn off Windows Event Logon it will also turn off Network List Services and Network Location Awareness which may disable the
+	Search Bar and Search Icon and you won't be able to search for anything. This issue depends on the Window 10 version
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 	1. In the Search Bar type and run: Services
@@ -471,35 +493,35 @@ Note: 	*If you turn off Windows Event Logon it will also turn off Network List S
 		e. Save the changes
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Note: 	Some services cannot be stopped through this screen...but I have a fix!!! See Step #8!!!
+Note: 	Some services cannot be stopped here but in Safe Mode
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 	4. Reboot the system and when you return don't forget to run ApateDNS to continue finding call-outs!
 
+==================================================================================================================================================
+Step #10: Modifying the Registry to Stop Blocked Services
+==================================================================================================================================================
+As mentioned in Step #9, some services cannot be disabled, but we can if we modify the Registry. Below are the ones you should be worried about.
 
-==================================================================================================================================================
-Step #9: Modifying the Registry to Stop Blocked Services
-==================================================================================================================================================
-As mentioned in Step #7, some services cannot be disabled but we can do it if we modify the Registry. Below are the ones you should be worried about.
-I recommend you have Services and REGEDIT screens side by side so you can see the changes happening. If changes do not happen then you may need to
+I recommend you have Services and REGEDIT screens side by side so you can see the changes happening. If changes do not happen, then you may need to
 shutdown the Services screen and return to it to refresh it.
 
-	1. Disable Windows Update Medic Service
+	1. Disable Windows Update Medic Service:
 		a. On the Search Bar type and run: Regedit
 		b. Go to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WaaSMedicSvc
 		c. In right pane, double click on Start registry DWORD to modify its Value data
 		d. Set the Value data to 4 to disable Windows Update Medic Service
 		e. OK to save changes
 
-	2. Disable Auto-activation feature
+	2. Disable Auto-activation feature:
 		a. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform\Activation
 		b. Select MANUAL and change to 4 to disable
 		
-	3. Disable Auto-activation feature Alternate #1
+	3. Disable Auto-activation feature (Alternative #1):
 		a. Computer\HKEY_CURRENT_USER\Control Panel\Desktop
 		b. Go to PaintDesktopVersion and change to 4
 
-	4. Disable Auto-activation feature Alternate #2
+	4. Disable Auto-activation feature (Alternative #2):
 		a. Kill the process in notepad++ open a new page
 		b. type:
 			@echo off
@@ -510,20 +532,20 @@ shutdown the Services screen and return to it to refresh it.
 		d. Run as Admin
 		e. Restart
 
-	5. Disable Auto-activation feature Alternate #3
+	5. Disable Auto-activation feature (Alternate #3):
 		a. Right click on Desktop > Display settings > Notifications & Actions
 		b. Turn off:
 			Show me Windows Welcome Experience
 			Get tips, tricks and suggestions
 		c. Restart
 
-	3. Disable Update Orchestrator
+	3. Disable Update Orchestrator:
 		a. Go to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UsoSvc
 		b. Select START and change to 4 to disable
 		c. Go to Task Manager > Services tab
 		d. STOP the service from there
 
-	4. Disable OneSync_c523 Service
+	4. Disable OneSync_c523 Service:
 		a. HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\OneSyncSvc_c523d
 		b. Select START and change to 4 to disable
 
@@ -533,13 +555,12 @@ shutdown the Services screen and return to it to refresh it.
 Note:	You can also Export the Registry but before you do, use Wise Registry Cleaner to clean it, then Export it
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-
 ==================================================================================================================================================
-Step #10: Modifying the Group Policy
+Step #11: Modifying the Group Policy
 ==================================================================================================================================================
-Ok...almost done! I've left the longest step in this guide for last. FYI...Some rules state Allow while others state Turn Off...read what they say
-then make the necessary changes by double-clicking on them. I highly recommend you check all of the other folders here so you can get a sense
-of all the options you have available. You'll be amazed!
+Ok...almost done! I've left the longest step in this guide for last. FYI, some rules state "Allow" while others state "Turn Off". Read what each say
+then make the necessary changes by double-clicking on them. I highly recommend you check all of the other folders here so you can get a sense of all 
+the options you have available. You'll be amazed!
 
 	1. In the Search Bar type and run: gpedit.msc
 
@@ -555,16 +576,15 @@ Important!	*Do not disable TabletPC or anything Tablet related in both Group Pol
 	4. Carefully read each option that reads Turn Off or Enable and what they do...FYI, you need to Enable a Turn Off policy
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Note: 	By default Policies will read "Not configured" which is the same to say the Policy is either On or Off depending of what it states in its
+Note: 	By default, Policies will read "Not configured" which is the same to say the Policy is either On or Off depending of what it states in its
 	description
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: 	If you see an icon of an arrow pointing down, it means that the Service was turned off. You don't need to do anything in Group Policy
-	unless you want to. But since this is Paranoid mode then...
+	unless you want to. But since this is Par@n0Id mode then...
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-
 ==================================================================================================================================================
-Step #11: Cleaning and Backing Up the Registry
+Step #12: Cleaning and Backing Up the Registry
 ==================================================================================================================================================
 The last thing to do is clear the registry from all the dead registry keys left from all the removing and modifications. This is another easy
 part.
@@ -580,13 +600,12 @@ part.
 	5. When done click on the CCleaner button...you may have to do this a few times
 
 	6. Done!
-
 	
 ==================================================================================================================================================
-Step #12: Modifying the Task Scheduler
+Step #13: Modifying the Task Scheduler
 ==================================================================================================================================================
-Not 100% sure if they services disabled still send out information like Telemetry, Reports, etc; but Task Scheduler is the last thing you need to 
-check out before we are done. 
+Not 100% sure if the services disabled still send out information like Telemetry, Reports, etc., since I have not done a Wireshark capture, but 
+Task Scheduler is the last thing you need to check out before we are done. 
 
 	1. In the Search Bar, type and run: Task Scheduler
 	
@@ -601,56 +620,65 @@ check out before we are done.
 	6. Go to Microsoft > Windows > Application Experience and check out the pending taskings there
 	
 	7. Go through each folder and look for anything that sends report back to Microsoft
-		(e.g. Telemetry, Error Reporting, Update Orchestrator, Remote Access, Activation Technologies, etc)
-	
-	
+			i. Telemetry, Error Reporting, Update Orchestrator, Remote Access, Activation Technologies, etc.
+		
 ==================================================================================================================================================
-Step #13: Bonus Info!
+Step #14: Bonus Info!
 ==================================================================================================================================================
+Here's some additional stuff I think is important to have/know.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-GodMode:
+14-1: GodMode
 --------------------------------------------------------------------------------------------------------------------------------------------------
 What if I told you there is such a thing as GodMode in Windows? Yes! Just like a video game where you can have access to every available option or
 make your character invincible, you can have access to all the Windows user features in one single screen. To do this:
 	
-	1. In Desktop create a new Folder
-	2. Right click on it and copy and paste this: GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
-	3. Hit the Enter keys
+	1. In Desktop, create a new Folder
+
+	2. Right click on it and copy/paste this: GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
+
+	3. Hit the Enter key
 
 These options are not Group Policy or Services options but user options. But it gives you even more control of the OS.
 
-
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Stop Windows from Remembering Stuff:
---------------------------------------------------------------------------------------------------------------------------------------------------
-This option can disable Windows from remembering files that were opened.
+14-2: Stop Windows from Remembering Stuff
+-------------------------------------------------------------------------------------------------------------------------------------------------
+This option can disable Windows from remembering any files that were opened so they don't show up in the Recent listing under Home.
 	
 	1. In the Search Bar type and run: gpedit.msc
-	2. Open User Configuration > Administrative Templates > Start Menu and Taskbar
-	3. Double click on Do not keep history of recently opened documents and Enable this Policy
+
+	2. Open User Configuration > Administrative Templates > Start Menu and Taskbar.
+
+	3. Double click on Do not keep history of recently opened documents and Enable this Policy.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Note:	a. Check all other options here! How about: Clear history of recently opened documents on exit
+Note:	a. Check all other options here! How about: Clear history of recently opened documents on exit.
 	b. Check the All Settings folder at the bottom of this Folder Tree and also under Computer Configuration...so many options!
-	c. These options are per user account and cannot be applied Globally in the system
+	c. These options are per user account and cannot be applied Globally in the system.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
+14-3: Set the Number of Cores/RAM
+--------------------------------------------------------------------------------------------------------------------------------------------------
+This option is not really needed as the OS will automatically do it and I haven't seen any improvement on modern systems but may be needed for
+legacy hardware.
 
---------------------------------------------------------------------------------------------------------------------------------------------------
-Set the Number of Cores/RAM:
---------------------------------------------------------------------------------------------------------------------------------------------------
 	1. In the Search Bar type/run: msconfig.msc
-	2. On the pop-up go to the Boot tab then the Advance options... button
-	3. If you have a multi-core CPU (and we all do now a-days) you have to wonder why Windows doesn't recognize them...not all programs use all
-	CPU, but you can tell it here to show you all CPUs by changing the Number of Processors as well as the Maximum Memory.
-	4. While you're here, check the other tabs
+
+	2. On the pop-up go to the Boot tab, then the Advance options... button.
+
+	3. If you have a multi-core CPU (and we all do now-a-days) you have to wonder why Windows doesn't recognize them. Not all programs use all
+	CPU cores, but you can tell it here to use/show you all CPUs by changing the Number of Processors as well as the Maximum Memory.
+
+	4. While you're here, check the other tabs.
+
+	5. Press Ctrl+Shift+Esc keys then The Performance tab to confirm. You may need to reboot.
 
 FYI, you can create shortcuts to the Desktop of the Firewall, Resources and other options.
 
-
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Disable  Auto-Activation feature (Windows 7):
+14-4: Disable Auto-Activation feature (Windows 7)
 --------------------------------------------------------------------------------------------------------------------------------------------------
 	1. HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SL\Activation
 	2. Select START and change to 1 to disable
@@ -667,48 +695,54 @@ Disable  Auto-Activation feature (Windows 7):
 		4 - Disable
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Stop Windows from Updating:
+14-5: Stop Windows from Updating
 --------------------------------------------------------------------------------------------------------------------------------------------------
-I didn't want Windows 7 updating to 8 or 10. You may not want 10 updating to 11. I know I don't. But there may be other reasons why you don't want 
-Windows to auto-update. You may want exclusive hands-on updates to make sure your network doesn't collapse due to a bad update patch, or you may not 
-want new holes in your security. At any rate here's how to stop Windows from updating. FYI, this may be temporary as some people are reporting that 
-this option enables again in 2 or 3 days after disabling it. I will continue to find out options and place them here.
+I didn't want Windows 7 updating to 8 or 10. You may not want 10 updating to 11; I know I don't. But there may be other reasons why you don't want 
+Windows to auto-update. You may want exclusive hands-on updates to make sure your network doesn't collapse due to a bad update patch (Windows 11),
+or you may not want new holes in your firewall security. At any rate, here's how to stop Windows from updating. FYI, this may be temporary as some 
+people are reporting that this option enables again in 2 or 3 days after disabling it or when manually pushing an update patch. I will update this 
+guide as I find fixes for this.
 	
 Step #1 (Settings):
-	1. Open Settings
+
+	1. In the Search textbox type: Settings
 	
-	2. Click on Update & Security
+	2. Click on Update & Security.
 	
-	3. Click on Windows Update
+	3. Click on Windows Update.
 	
-	4. Click the Advanced options button
+	4. Click the Advanced options button.
 	
-	5. Change the Pause Until option and select the last date on the list
+	5. Change the Pause Until option and select the last date on the list.
 	
 Step #2 (Group Policies):
-	1. Type/run gpedit.msc
+
+	1. Type and run gpedit.msc
 	
-	2.Go to the following path:
+	2. Go to the following path:
 		a. Computer Configuration > Administrative Templates > Windows Components > Windows Update
 	
-	3. Double-click the Configure Automatic Updates policy option on the right side
+	3. Double-click the Configure Automatic Updates policy option on the right side.
 	
-	4. Select the Disabled option to turn off automatic Windows 10 updates permanently
+	4. Select the Disabled option to turn off automatic Windows 10 updates permanently.
 	
-	5. Click the Apply, then the OK button
+	5. Click the Apply, then the OK button.
 
+	6. Go back to the Settings screen mentioned in Step #1 of this section and see if there is a message that reads 
+	"Some settings are managed by your organization"
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-Note: while you're here, check out other policies you can disable. FYI, some "disabling" options have to be "enabled"...read each policy carefully
-to understand what it does.
+Note: While you're here, check out other Group Policies you can disable. FYI, some "disabling" options have to be "enabled" others have to be allowed 
+to be disabled. They're a bit confusing but read each policy carefully to understand what each does.
 --------------------------------------------------------------------------------------------------------------------------------------------------
-	FYI: Policy Values
-		a. 2 — Notify for download and auto install
-			i. This option prevent updates from downloading automatically
-		b. 3 — Auto download and notify for install
-		c. 4 — Auto download and schedule the install
-		d. 5 — Allow local admin to choose setting
-		e. 7 — Auto Download, Notify to install, Notify to Restart
+
+FYI: Policy Values
+	a. 2 — Notify for download and auto install
+		i. This option prevent updates from downloading automatically
+	b. 3 — Auto download and notify for install
+	c. 4 — Auto download and schedule the install
+	d. 5 — Allow local admin to choose setting
+	e. 7 — Auto Download, Notify to install, Notify to Restart
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 Note: The best option to disable automatic updates is using  (2 — Notify for download and auto install). This option won't download updates
@@ -723,63 +757,123 @@ Step #3: (Edit the Registry)
 		a. HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows
 	
 	3. Find the WindowsUpdate key (folder) and open it
-			i. If not there, create it	
+			i. Create it if not there
 	
 	4. Right-click the AU subkey (folder), then select New > DWORD32 
-			i. If not there, create it and create the DWORD32
+			i. If not there, create the subkey then create the DWORD32
 			
 	5. Change the value in key NoAutoUpdate from 0 to 1
 			i. If not there, create it and change the value to 1
 		
-	6. Click the OK button then restart the computer
-	
+	6. Click the OK button...DO NOT RESTART YET!
+
+Step #4: (Disable Windows Update from Safe Mode):
+
+	1. On the Search textbox type and run msconfig
+
+	2. Select the Boot tab and click on the Safe boot checkbox.
+
+	3. Click Apply > Ok > Restart to go into Safe Mode.
+
+	4. Go to Services and double check that Windows Update is disabled.
+
+	5. Check on all Group Policies and Services changes you may want to make at this time 
+			i. FYI, you don't need XBOX LIVE, Telephony, Mobile services, etc.
+
+	6. While in Safe Mode go back to regedit.
+
+	7. Go to HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WaaSMedicSvc
+			i. To disable Windows Update Medic Service
+			i. This service is there to force Windows updates
+
+	8. Right click on StartModify
+			i. Create it if not there
+
+	9. Change the value data from 3 to 4
+
+	10. Before you return to Normal mode, go back to the Boot tab and uncheck the Safe Mode checkbox, then restart
 
 ==================================================================================================================================================
-Step #14: Final Words!
+#15: Additional Recommended Tools for Security
 ==================================================================================================================================================
-By now I hope you have a better and greater understanding of the many options Windows has at your disposal. With them, we can even find removed 
-options like Windows Updates which Microsoft removed user access in Control Panel. I hope I have taught you something new about Windows and how 
-you can be more that just be an idle user but an active participant in control of your operating system.
+These are additional programs I use to keep my OS safe. Remember that nothing is 100% secure/safe but you can put up a good fight and discourage
+malicious actors from attacking you.
 
-I've been dealing with Microsoft products since DOS 5.0 and I have learned a lot about making an OS run the way I want it to run. With security in 
-mind, I tell you the following:
+	- TrackEraser (http://www.acesoft.net/download.htm)
+	- CCleaner (block it/disable auto-update/auto-run)
+	- Wise Cleaner (block it/disable auto-update)
 
-	1. If you're missing a .dll file, DO NOT DOWNLOAD IT from just ANY website. Any "missing" dll files can be found from another system or 
-	just reinstalling the program in question. Usually DirectX is the one that gets most of these problems.
+If you want to practice Windows security, then Linux is your best bet to becoming a great security analyst.
+	- Oracle Virtualbox 
+	- REMnux VM (comes with many PDF scanning tools and many others)
+	- add: quicksand, mutool, cpdf, pdfinfo
 
-	2. Malware doesn't necessarily come infected anymore...it downloads from servers once the main (safe) program is installed. The files will call-out to 
-	command-and-control (C2) servers then download their payload and do the damage. Do not install files from unknown sources! Even popular file servers
-	like Tu-Cows, FileHippo, etc. will contain malicious programs. So download from the developers.
+==================================================================================================================================================
+#16: Final Words!
+==================================================================================================================================================
+By now I hope you have a greater understanding of the many options Windows has at your disposal. With them, we can even find the some removed option 
+like Windows Updates and/or Windows Updates Medic Service which Microsoft removed user access to in the Control Panel for some Win10 versions as
+well as Windows 11. I hope my guide has taught you something new about Windows and how you can be more than just an idle user, but an active 
+participant in full control of your operating system. These skills are of great value to any employer, I should know, I've used these skills myself 
+in my resume and at work.
 
-	3. You can easily view if a link in an email is legit by hovering your mouse over the link and waiting for a text pop-up. Also be aware of typos
-	in links like: BankofAmer1ca, 1inkedIn, etc., or redirection from a link or a message asking you to update your Browser. Automatic updates
-	from Browsers should always be on.
+I've been working with Microsoft products since DOS 5.0 and have learned a lot about making an OS run the way I want it to run. With 30+ years of OS 
+security in mind, I can tell you the following:
+
+	1. If you're missing a Dynamic-Link Library (.dll) file, DO NOT DOWNLOAD IT FROM ANY WEBSITE! Any "missing" .dll files can be found from 
+	another OS system, a fresh installation of an OS in a VM or just reinstalling the program in question. Usually DirectX is the one that gets 
+	most of these problems.
+
+	2. Malware doesn't necessarily come infected anymore, it downloads from servers once the main (safe) program is installed. Files will call-out 
+	to a command-and-control (C2) server, then download their payload and do the damage. Do not install files from unknown sources! Even popular 
+	file servers like Tu-Cows, FileHippo, etc., will contain malicious programs. So, download directly from the developers if you can. Or download 
+	to a secured VM with Share Folders/drag-and-drop options disabled then inspect your download. I recommend Windows Defender (WD), however, if
+	you're into cyber forensics like myself, WD is way too secure and will delete your samples even in a VM. Additionally, WD will prevent any 
+	"cracks" for programs/games to be used. I prefer Avast as it can be handled easier.
+
+	3. You can easily view if a link in an email is legit by hovering your mouse over the link and waiting for a text pop-up. Also be aware of 
+	typos in URLs/links like: BankofAmer1ca, 1inkedIn, Yahooe, g1thub, etc. Some font styles hide what a number and letter could actually be.
+	Also, be aware of redirection from a link or a message to another website asking you to "update your Browser". No website ever asks to update
+	a web-browser!
 
 	4. Never give your info to anyone! No company/financial institution will ever ask you to confirm anything personal like social security number, 
 	mother's maiden name, pin number, etc. That is not how they work.
-	
-	5. Be aware of phone scams or emails that stir fear, anger or religious feelings...everything you click on, like or comment is being collected
-	and can be used against you. Fight the urge to click on a comment that stirs feelings so you don't get targeted by spammens, etc.
 
-	5. Clear your cookies...ALWAYS! Set your browser to NEVER REMEMBER settings if you can. Firefox is good for this option and gets updates faster
-	that any other browser.
+	5. Never answer any text messages on any cellphone, never click a link or open a PDF on any mobile device or PC. If you have to, make sure you 
+	have a secure VM to download them to then test them. I recommend installing REMnux VM and adding the quicksand tool. REMnux comes with many
+	terminal tools to scan PDF documents.
 	
-	6. Speaking about Firefox, did you know you can also modify it to stop leakage to the internet? Open a browser and type about:config. Look for things
-	like WebRTC. Google for WebRTC leaks and any other browser leaks. Chances are you can modify the browser to stop. Also you can stop updates, reporting,
-	etc.
+	6. Be aware of phone scams or emails that stir fear/anger or religious/political propaganda. Everything you click on, like or comment is being 
+	collected somewhere and can be used against you. Fight the urge to click on a comment that stirs feelings so you don't get targeted by spammers, 
+	and make sure you always delete your cookies as they can be used to track your likes and also steal login information.
+
+	7. Clear your cookies...ALWAYS! Set your browser to NEVER REMEMBER settings if you can. Firefox is good for this and gets updates faster than
+	any other browser. I highly recommend using TracksEraser. It works with all Windows versions. There are also add-ons for Firefox, but I cannot 
+	confirm their safety.
 	
-	7. Do not fall for the "computer is slow? then use this program" scam. TV commercials and pop-ups that advertise fixes from online technicians are fake. 
-	You will get infected and your important documents exfiltrated. Learn how to fix stuff by yourself and use tools like CCleaner or Wise Cleaner to clean
-	and streamline your Registry (don't forget to block them). Also Windows comes with a Defragmenter you can use to streamline the HDD unless you have an 
-	SDD then you don't really need to defrag. Also, be careful with these two programs I've mentioned. I've seen them both communicating to China. I use
-	them and block them from outgoing communication using Glasswire.
+	8. Speaking about Firefox, did you know you can also modify it to stop leakage to the internet? Open a tab and type 'about:config'. Look for things
+	like WebRTC. Google for WebRTC leaks and any other browser leaks. You can stop the browser from doing updates, reporting errors, etc.
 	
-	8. Shouldn't need to tell you this but, if you buy a cheap computer then you will have a slow computer. So buy or better yet, build a good and fast 
-	computer that will last you years. Something with a Six-core or more CPU, 32GB and 1TB HDD/SSD are the best. You may just need to upgrade the GPU 
-	every 2 or 3 years unless you don't plan to play graphic intensive games. Get rid of all the Bloatware from Windows and any other programs already 
-	pre-installed in the system. FYI, Laptops tend to slow down when running from batteries.
+	9. Do not fall for the "IS YOUR COMPUTER SLOW? then use this "insert_program_name_here" scam from online and TV commercials that advertise fixes 
+	from "online technicians". You will definitely get infected and your important data exfiltrated. Learn how to fix stuff by yourself and use tools 
+	like CCleaner or Wise Cleaner to clean and streamline your Registry (don't forget to block them). Also Windows comes with a Defragmenter you can 
+	use to streamline the HDD unless you have an SDD, then you don't really need to defrag. Additionally, be careful with these two programs I've 
+	mentioned above. I've seen them both communicating to China at one point, however, I have them blocked in Glasswire and also in my HOST file. 
+	
+	10. Shouldn't need to tell you this but if you buy a cheap computer then you will have a slow computer. So, buy or better yet build a good and 
+	fast computer that will last you several years. Something with a Six-core or more CPU, 32GB of RAM and 2TB+ HDD/SSD are the best. The least you 
+	will have to do is upgrade the GPU every 2 or 3 years unless you don't plan to play graphic intensive (AAA) games. Laptops tend to slow down 
+	when running from batteries.
+
+	11. The latest online danger is now fakeCAPTCHA which asks a user to enter a specific script into the Search/Run textbox in Windows. No CAPTCHA 
+	works this way, but people keep falling for it and run malicious scripts that allow an attacker to get access to their system. There are others 
+	like ClickFix which inject code to vulnerable websites, then a user clicks somewhere on that website they get infected. There are also direct 
+	CPU vulnerabilities. These are also code so possibly a firmware update could fix them. It's always a cat and mouse chase when it comes to system 
+	security.
+
+	12. Keep up with the latest threats with websites like BleepingComputer and TheHackerNews.
 
 ==================================================================================================================================================
-Contact me if you have any questions on anything I've mentioned here, I've missed something, you have updates or new stuff to add to this guide or 
-something needs clarification.
+Contact me if you have any questions on anything I've mentioned in this guide, I've missed something, you have suggestions or new stuff to add to 
+this guide or something needs clarification.
 ==================================================================================================================================================
